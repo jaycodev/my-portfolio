@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { GithubLogo } from "./icons";
 import { motion } from "framer-motion";
+import BookStudioImg from "@/assets/images/projects/bookstudio.webp";
+import MobilnetImg from "@/assets/images/projects/mobilnet.webp";
+import MedicalAppointmentsImg from "@/assets/images/projects/medical-appointments.webp";
 
 interface ProjectCardProps {
   title: string;
@@ -80,8 +83,7 @@ const Projects = () => {
       title: "BookStudio",
       description:
         "Plataforma web para la gestión y préstamo de libros en bibliotecas, con panel administrativo.",
-      image:
-        "https://raw.githubusercontent.com/jaycodev/bookstudio/main/public/readme.jpg",
+      image: BookStudioImg.src,
       technologies: [
         "React",
         "TypeScript",
@@ -97,8 +99,7 @@ const Projects = () => {
       title: "Mobilnet",
       description:
         "Aplicación web para el registro RUC10 en redes GPON, que incorpora visualización de datos mediante gráficos.",
-      image:
-        "https://raw.githubusercontent.com/jaycodev/mobilnet/main/images/readme.jpg",
+      image: MobilnetImg.src,
       technologies: ["Spring Boot", "Thymeleaf", "Bootstrap", "MySQL"],
       liveUrl: "https://mobilnet.onrender.com",
       githubUrl: "https://github.com/jaycodev/mobilnet",
@@ -108,7 +109,7 @@ const Projects = () => {
       description:
         "Aplicación web para la gestión de citas médicas, con programación en calendario.",
       image:
-        "https://raw.githubusercontent.com/jaycodev/medical-appointments/main/Assets/readme.jpg",
+        MedicalAppointmentsImg.src,
       technologies: [".NET Core", "SQL Server", "Bootstrap", "Cloudinary"],
       githubUrl: "https://github.com/jaycodev/medical-appointments",
     },
