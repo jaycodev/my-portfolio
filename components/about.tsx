@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -5,6 +7,7 @@ import { Download } from "lucide-react";
 import type { HTMLAttributes } from "react";
 import { GithubLogo } from "./icons";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -81,10 +84,11 @@ const ProfileImage = ({
 }: HTMLAttributes<HTMLDivElement>) => (
   <div className={cn("mt-10 w-48 h-48 md:w-64 md:h-64", className)} {...props}>
     <div className="relative w-full h-full rounded-2xl overflow-hidden bg-accent">
-      <img
-        src="/placeholder.svg"
-        alt=""
-        className="object-cover w-full h-full"
+      <Image
+        src="/images/placeholder.svg"
+        alt="Foto de perfil de Jason Vila"
+        className="object-cover"
+        fill
       />
     </div>
   </div>

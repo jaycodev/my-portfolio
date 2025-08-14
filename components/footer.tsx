@@ -1,6 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { GithubLogo, LinkedinLogo } from "./icons";
 import { CodeXml } from "lucide-react";
+import Link from "next/link";
 
 const footerLinks = [
   {
@@ -35,12 +36,12 @@ const Footer = () => {
           <ul className="mt-6 flex items-center gap-4 flex-wrap">
             {footerLinks.map(({ title, href }) => (
               <li key={title}>
-                <a
+                <Link
                   href={href}
                   className="text-muted-foreground transition-colors duration-200 ease-in-out hover:text-foreground"
                 >
                   {title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

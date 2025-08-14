@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
@@ -19,9 +21,7 @@ import {
   AngularLogo,
 } from "./icons";
 import { motion } from "framer-motion";
-import BookStudioImg from "@/assets/images/projects/bookstudio.webp";
-import MobilnetImg from "@/assets/images/projects/mobilnet.webp";
-import MedicalAppointmentsImg from "@/assets/images/projects/medical-appointments.webp";
+import Image from "next/image";
 
 interface Technology {
   label: string;
@@ -49,10 +49,12 @@ const ProjectCard = ({
     <div className="group relative flex flex-col overflow-hidden rounded-xl border transition-all hover:border-primary/30">
       {/* Project Image */}
       <div className="relative h-64 overflow-hidden bg-accent">
-        <img
+        <Image
           src={image}
           alt={title}
-          className="object-cover transition-transform duration-300 group-hover:scale-105 w-full h-full"
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
 
@@ -109,7 +111,7 @@ const Projects = () => {
       title: "BookStudio",
       description:
         "Plataforma web para la gestión y préstamo de libros en bibliotecas, con panel administrativo.",
-      image: BookStudioImg.src,
+      image: "/images/projects/bookstudio.webp",
       technologies: [
         { label: "React", icon: ReactLogo },
         { label: "TypeScript", icon: TypeScriptLogo },
@@ -125,7 +127,7 @@ const Projects = () => {
       title: "Mobilnet",
       description:
         "Aplicación web para el registro RUC10 en redes GPON, que incorpora visualización de datos mediante gráficos.",
-      image: MobilnetImg.src,
+      image: "/images/projects/mobilnet.webp",
       technologies: [
         { label: "Spring Boot", icon: SpringBootLogo },
         { label: "Thymeleaf", icon: ThymeleafLogo },
@@ -139,7 +141,7 @@ const Projects = () => {
       title: "Medical appointments",
       description:
         "Aplicación web para la gestión de citas médicas, con programación en calendario.",
-      image: MedicalAppointmentsImg.src,
+      image: "/images/projects/medical-appointments.webp",
       technologies: [
         { label: ".NET Core", icon: DotNetCoreLogo },
         { label: "SQL Server", icon: SQLServerLogo },
@@ -152,7 +154,7 @@ const Projects = () => {
       title: "Course platform",
       description:
         "Plataforma online para cursos dirigida a estudiantes, que permite la administración de contenidos.",
-      image: "/placeholder.svg",
+      image: "/images/placeholder.svg",
       technologies: [
         { label: "Angular", icon: AngularLogo },
         { label: "Spring Boot", icon: SpringBootLogo },

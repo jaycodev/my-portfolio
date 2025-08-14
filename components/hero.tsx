@@ -1,3 +1,5 @@
+"use client";
+
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -50,7 +52,7 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.24, ease: "easeOut" }}
         >
           Estudiante de <strong>Computación e Informática</strong>, apasionado
-          por la creación de <strong>aplicaciones web únicas</strong> con diseño
+          por la creación de <strong>aplicaciones web modernas</strong> con diseño
           intuitivo y <strong>código limpio</strong>.
         </motion.p>
 
