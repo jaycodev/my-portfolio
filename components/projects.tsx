@@ -82,7 +82,7 @@ const ProjectCard = ({
           {liveUrl && (
             <Button variant="default" className="rounded-full" asChild>
               <a href={liveUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-1 size-4" />
+                <ExternalLink className="size-4" />
                 Demo
               </a>
             </Button>
@@ -94,7 +94,7 @@ const ProjectCard = ({
               asChild
             >
               <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                <GithubLogo className="mr-1 size-4" />
+                <GithubLogo className="size-4" />
                 Código
               </a>
             </Button>
