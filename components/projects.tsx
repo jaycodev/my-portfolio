@@ -19,6 +19,8 @@ import {
   SQLServerLogo,
   CloudinaryLogo,
   AngularLogo,
+  JavaLogo,
+  CSharpLogo,
 } from "./icons";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -113,8 +115,8 @@ const Projects = () => {
         "Plataforma web para la gestión y préstamo de libros en bibliotecas, con panel administrativo.",
       image: "/images/projects/bookstudio.webp",
       technologies: [
-        { label: "React", icon: ReactLogo },
         { label: "TypeScript", icon: TypeScriptLogo },
+        { label: "React", icon: ReactLogo },
         { label: "Vite", icon: ViteLogo },
         { label: "Shadcn UI", icon: ShadcnLogo },
         { label: "Tailwind CSS", icon: TailwindLogo },
@@ -129,6 +131,7 @@ const Projects = () => {
         "Aplicación web para el registro RUC10 en redes GPON, que incorpora visualización de datos mediante gráficos.",
       image: "/images/projects/mobilnet.webp",
       technologies: [
+        { label: "Java", icon: JavaLogo },
         { label: "Spring Boot", icon: SpringBootLogo },
         { label: "Thymeleaf", icon: ThymeleafLogo },
         { label: "Bootstrap", icon: BootstrapLogo },
@@ -143,6 +146,7 @@ const Projects = () => {
         "Aplicación web para la gestión de citas médicas, con programación en calendario.",
       image: "/images/projects/medical-appointments.webp",
       technologies: [
+        { label: "C#", icon: CSharpLogo },
         { label: ".NET Core", icon: DotNetCoreLogo },
         { label: "SQL Server", icon: SQLServerLogo },
         { label: "Bootstrap", icon: BootstrapLogo },
@@ -156,8 +160,9 @@ const Projects = () => {
         "Plataforma online para cursos dirigida a estudiantes, que permite la administración de contenidos.",
       image: "/images/placeholder.svg",
       technologies: [
-        { label: "Angular", icon: AngularLogo },
+        { label: "Java", icon: JavaLogo },
         { label: "Spring Boot", icon: SpringBootLogo },
+        { label: "Angular", icon: AngularLogo },
         { label: "Tailwind CSS", icon: TailwindLogo },
         { label: "Shadcn UI", icon: ShadcnLogo },
       ],

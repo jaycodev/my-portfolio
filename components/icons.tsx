@@ -749,3 +749,123 @@ export const AngularLogo = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 );
+
+export const JavaLogo = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    role="img"
+    viewBox="0 0 256 346"
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMidYMid"
+    {...props}
+  >
+    <title>Java</title>
+    <path
+      d="M83 267s-14 8 9 11c27 3 41 2 71-3 0 0 8 5 19 9-67 29-153-2-99-17M74 230s-15 11 8 13c29 3 52 3 92-4 0 0 6 5 15 8-82 24-173 2-115-17"
+      fill="#5382A1"
+    />
+    <path
+      d="M144 166c17 19-4 36-4 36s42-22 22-49c-18-26-32-38 44-82 0 0-119 29-62 95"
+      fill="#E76F00"
+    />
+    <path
+      d="M233 295s10 8-10 15c-39 12-163 15-197 0-12-5 11-13 18-14l12-2c-14-9-89 19-38 28 138 22 251-10 215-27M89 190s-63 15-22 21c17 2 51 2 83-1 26-2 52-7 52-7l-16 9c-64 16-187 8-151-9 30-14 54-13 54-13M202 253c64-33 34-66 13-61l-7 2s2-3 6-5c41-14 73 43-14 66l2-2"
+      fill="#5382A1"
+    />
+    <path
+      d="M162 0s36 36-34 91c-56 45-12 70 0 99-32-30-56-56-40-80 23-35 89-53 74-110"
+      fill="#E76F00"
+    />
+    <path
+      d="M95 345c62 4 158-3 160-32 0 0-4 11-51 20-53 10-119 9-158 2 0 0 8 7 49 10"
+      fill="#5382A1"
+    />
+  </svg>
+);
+
+export const CSharpLogo = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    role="img"
+    viewBox="0 -1.43 255.58 290.11"
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMidYMid"
+    {...props}
+  >
+    <title>C#</title>
+    <path
+      fill="#a179dc"
+      d="M255.57 84.45c0-4.83-1.04-9.1-3.13-12.76a24.4 24.4 0 0 0-9.24-9C209.17 43.05 175.1 23.5 141.1 3.86c-9.17-5.3-18.06-5.1-27.16.27-13.54 7.98-81.35 46.83-101.55 58.53C4.06 67.5.02 74.87 0 84.44v118.37c0 4.72 1 8.9 2.99 12.51 2.05 3.72 5.17 6.82 9.38 9.26 20.21 11.7 88.02 50.55 101.56 58.53 9.11 5.38 18 5.57 27.17.27 34.02-19.64 68.08-39.2 102.1-58.81a24.33 24.33 0 0 0 9.4-9.25c1.99-3.61 2.98-7.8 2.98-12.52l-.01-118.35"
+    />
+    <path
+      fill="#280068"
+      d="M128.18 143.24 2.98 215.33c2.06 3.7 5.18 6.8 9.4 9.25 20.2 11.7 88.01 50.55 101.55 58.53 9.11 5.38 18 5.57 27.17.27 34.02-19.64 68.08-39.2 102.1-58.81a24.33 24.33 0 0 0 9.4-9.25z"
+    />
+    <path
+      fill="#390091"
+      d="M255.57 84.45c0-4.83-1.04-9.1-3.13-12.76l-124.26 71.55 124.41 72.07c2-3.6 2.99-7.79 3-12.51 0 0 0-78.9-.02-118.35"
+    />
+    <g fill="#fff">
+      <path d="M201.9 116.3v13.47h13.47v-13.48h6.73v13.48h13.48v6.73H222.1v13.48h13.48v6.74H222.1v13.47h-6.73V156.7h-13.48v13.48h-6.73V156.7h-13.48v-6.73h13.47V136.5h-13.47v-6.74h13.47v-13.48zm13.47 20.2h-13.48v13.48h13.48z" />
+      <path d="M128.46 48.63a94.96 94.96 0 0 1 82.26 47.45l-.16-.27-41.35 23.8A47.28 47.28 0 0 0 129 96.33h-.54a47.3 47.3 0 0 0-47.3 47.3 47.08 47.08 0 0 0 6.23 23.47 47.28 47.28 0 0 0 82.29-.27l-.2.35 41.29 23.91a94.97 94.97 0 0 1-81.25 47.54h-1.06a94.96 94.96 0 0 1-95-95 95 95 0 0 1 95-95z" />
+    </g>
+  </svg>
+);
+
+export const NextJsLogo = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    role="img"
+    viewBox="0 0 180 180"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <title>Next.js</title>
+    <mask
+      id="nextjs_icon_dark__mask0_408_139"
+      style={{ maskType: "alpha" }}
+      maskUnits="userSpaceOnUse"
+      x="0"
+      y="0"
+      width="180"
+      height="180"
+    >
+      <circle cx="90" cy="90" r="90" fill="black" />
+    </mask>
+    <g mask="url(#nextjs_icon_dark__mask0_408_139)">
+      <circle cx="90" cy="90" r="87" fill="black" stroke="white" strokeWidth="6" />
+      <path
+        d="M149.508 157.52L69.142 54H54V125.97H66.1136V69.3836L139.999 164.845C143.333 162.614 146.509 160.165 149.508 157.52Z"
+        fill="url(#nextjs_icon_dark__paint0_linear_408_139)"
+      />
+      <rect
+        x="115"
+        y="54"
+        width="12"
+        height="72"
+        fill="url(#nextjs_icon_dark__paint1_linear_408_139)"
+      />
+    </g>
+    <defs>
+      <linearGradient
+        id="nextjs_icon_dark__paint0_linear_408_139"
+        x1="109"
+        y1="116.5"
+        x2="144.5"
+        y2="160.5"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="white" />
+        <stop offset="1" stopColor="white" stopOpacity="0" />
+      </linearGradient>
+      <linearGradient
+        id="nextjs_icon_dark__paint1_linear_408_139"
+        x1="121"
+        y1="54"
+        x2="120.799"
+        y2="106.875"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="white" />
+        <stop offset="1" stopColor="white" stopOpacity="0" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
