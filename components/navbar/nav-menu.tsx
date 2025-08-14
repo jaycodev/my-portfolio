@@ -58,13 +58,13 @@ export const NavMenu = ({ className, ...props }: NavigationMenuProps) => {
 
         <NavigationMenuItem>
           <NavigationMenuLinkPrimitive asChild>
-            <Link
-              href="#contact"
-              data-active={activeId === "contact" ? "true" : undefined}
-              aria-current={activeId === "contact" ? "true" : undefined}
+            <a
+              href="mailto:jasonvilac@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Contacto
-            </Link>
+            </a>
           </NavigationMenuLinkPrimitive>
         </NavigationMenuItem>
       </NavigationMenuList>
