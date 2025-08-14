@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { NavigationMenuProps } from "@radix-ui/react-navigation-menu";
-import { useActiveSection } from "@/hooks/useActiveSection";
+import { useActiveSection } from "@/hooks/use-active-section";
 import Link from "next/link";
 
 export const NavMenu = ({ className, ...props }: NavigationMenuProps) => {
