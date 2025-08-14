@@ -1,6 +1,4 @@
-import Hero from "@/components/hero";
-import Projects from "@/components/projects";
-import About from "@/components/about";
+import { Hero, Projects, About } from "@/components/sections";
 
 export default function Home() {
   return (

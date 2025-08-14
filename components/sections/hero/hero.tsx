@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { CircleArrowDown, Mail, Zap } from "lucide-react";
-import { LinkedinLogo } from "./icons";
+import { LinkedinLogo } from "@/components/icons";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -52,8 +52,8 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.24, ease: "easeOut" }}
         >
           Estudiante de <strong>Computación e Informática</strong>, apasionado
-          por la creación de <strong>aplicaciones web modernas</strong> con diseño
-          intuitivo y <strong>código limpio</strong>.
+          por la creación de <strong>aplicaciones web modernas</strong> con
+          diseño intuitivo y <strong>código limpio</strong>.
         </motion.p>
 
         <div className="mt-12 flex flex-col items-center gap-4">

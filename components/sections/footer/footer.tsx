@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import { GithubLogo, LinkedinLogo } from "./icons";
+import { GithubLogo, LinkedinLogo } from "@/components/icons";
 import { CodeXml } from "lucide-react";
 import Link from "next/link";
 

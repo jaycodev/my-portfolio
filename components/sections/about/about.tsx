@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Download } from "lucide-react";
 import type { HTMLAttributes } from "react";
-import { GithubLogo } from "./icons";
+import { GithubLogo } from "../../icons";
 import { motion } from "framer-motion";
 import Image from "next/image";
 

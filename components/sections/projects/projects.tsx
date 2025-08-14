@@ -21,7 +21,7 @@ import {
   AngularLogo,
   JavaLogo,
   CSharpLogo,
-} from "./icons";
+} from "@/components/icons";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
