@@ -1,17 +1,38 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
-import { GithubLogo } from "./icons";
+import {
+  GithubLogo,
+  ReactLogo,
+  TypeScriptLogo,
+  ViteLogo,
+  ShadcnLogo,
+  TailwindLogo,
+  TanstackLogo,
+  SpringBootLogo,
+  ThymeleafLogo,
+  BootstrapLogo,
+  MySQLLogo,
+  DotNetCoreLogo,
+  SQLServerLogo,
+  CloudinaryLogo,
+  AngularLogo,
+} from "./icons";
 import { motion } from "framer-motion";
 import BookStudioImg from "@/assets/images/projects/bookstudio.webp";
 import MobilnetImg from "@/assets/images/projects/mobilnet.webp";
 import MedicalAppointmentsImg from "@/assets/images/projects/medical-appointments.webp";
 
+interface Technology {
+  label: string;
+  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}
+
 interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
-  technologies: string[];
+  technologies: Technology[];
   liveUrl?: string;
   githubUrl?: string;
 }
@@ -42,9 +63,14 @@ const ProjectCard = ({
 
         {/* Technologies */}
         <div className="flex flex-wrap gap-2 mb-6">
-          {technologies.map((tech) => (
-            <Badge key={tech} variant="outline" className="rounded-full">
-              {tech}
+          {technologies.map(({ label, icon: Icon }) => (
+            <Badge
+              key={label}
+              variant="outline"
+              className="rounded-full flex items-center gap-1"
+            >
+              {Icon && <Icon className="size-4" />}
+              {label}
             </Badge>
           ))}
         </div>
@@ -54,7 +80,7 @@ const ProjectCard = ({
           {liveUrl && (
             <Button variant="default" className="rounded-full" asChild>
               <a href={liveUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-1 h-4 w-4" />
+                <ExternalLink className="mr-1 size-4" />
                 Demo
               </a>
             </Button>
@@ -66,7 +92,7 @@ const ProjectCard = ({
               asChild
             >
               <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                <GithubLogo className="mr-1 h-4 w-4" />
+                <GithubLogo className="mr-1 size-4" />
                 Código
               </a>
             </Button>
@@ -85,12 +111,12 @@ const Projects = () => {
         "Plataforma web para la gestión y préstamo de libros en bibliotecas, con panel administrativo.",
       image: BookStudioImg.src,
       technologies: [
-        "React",
-        "TypeScript",
-        "Vite",
-        "Shadcn UI",
-        "Tailwind CSS",
-        "Tanstack Router",
+        { label: "React", icon: ReactLogo },
+        { label: "TypeScript", icon: TypeScriptLogo },
+        { label: "Vite", icon: ViteLogo },
+        { label: "Shadcn UI", icon: ShadcnLogo },
+        { label: "Tailwind CSS", icon: TailwindLogo },
+        { label: "Tanstack Router", icon: TanstackLogo },
       ],
       liveUrl: "https://bookstudio-dev.vercel.app",
       githubUrl: "https://github.com/jaycodev/bookstudio",
@@ -100,7 +126,12 @@ const Projects = () => {
       description:
         "Aplicación web para el registro RUC10 en redes GPON, que incorpora visualización de datos mediante gráficos.",
       image: MobilnetImg.src,
-      technologies: ["Spring Boot", "Thymeleaf", "Bootstrap", "MySQL"],
+      technologies: [
+        { label: "Spring Boot", icon: SpringBootLogo },
+        { label: "Thymeleaf", icon: ThymeleafLogo },
+        { label: "Bootstrap", icon: BootstrapLogo },
+        { label: "MySQL", icon: MySQLLogo },
+      ],
       liveUrl: "https://mobilnet.onrender.com",
       githubUrl: "https://github.com/jaycodev/mobilnet",
     },
@@ -108,9 +139,13 @@ const Projects = () => {
       title: "Medical appointments",
       description:
         "Aplicación web para la gestión de citas médicas, con programación en calendario.",
-      image:
-        MedicalAppointmentsImg.src,
-      technologies: [".NET Core", "SQL Server", "Bootstrap", "Cloudinary"],
+      image: MedicalAppointmentsImg.src,
+      technologies: [
+        { label: ".NET Core", icon: DotNetCoreLogo },
+        { label: "SQL Server", icon: SQLServerLogo },
+        { label: "Bootstrap", icon: BootstrapLogo },
+        { label: "Cloudinary", icon: CloudinaryLogo },
+      ],
       githubUrl: "https://github.com/jaycodev/medical-appointments",
     },
     {
@@ -118,7 +153,12 @@ const Projects = () => {
       description:
         "Plataforma online para cursos dirigida a estudiantes, que permite la administración de contenidos.",
       image: "/placeholder.svg",
-      technologies: ["Angular", "Spring Boot", "Tailwind CSS", "Shadcn UI"],
+      technologies: [
+        { label: "Angular", icon: AngularLogo },
+        { label: "Spring Boot", icon: SpringBootLogo },
+        { label: "Tailwind CSS", icon: TailwindLogo },
+        { label: "Shadcn UI", icon: ShadcnLogo },
+      ],
       githubUrl: "https://github.com/jaycodev/course-platform",
     },
   ];
