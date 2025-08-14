@@ -16,10 +16,6 @@ const footerLinks = [
     title: "Sobre mí",
     href: "#about",
   },
-  {
-    title: "Contacto",
-    href: "#contact",
-  },
 ];
 
 const Footer = () => {
@@ -44,6 +40,16 @@ const Footer = () => {
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href="mailto:jasonvilac@gmail.com"
+                className="text-muted-foreground transition-colors duration-200 ease-in-out hover:text-foreground"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contacto
+              </a>
+            </li>
           </ul>
         </div>
         <Separator />
