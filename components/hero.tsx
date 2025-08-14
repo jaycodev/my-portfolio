@@ -70,7 +70,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
               >
                 <Button variant="outline" className="rounded-full text-base">
-                  <Mail className="size-4 mr-1" /> Contáctame
+                  <Mail className="size-4" /> Contáctame
                 </Button>
               </motion.a>
             </div>
@@ -82,7 +82,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
               >
                 <Button variant="outline" className="rounded-full text-base">
-                  <LinkedinLogo className="size-4 mr-1" /> LinkedIn
+                  <LinkedinLogo className="size-4" /> LinkedIn
                 </Button>
               </motion.a>
             </div>
@@ -95,7 +95,7 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.48, ease: "easeOut" }}
             >
               <Button className="rounded-full text-base">
-                Descubre mi trabajo <CircleArrowDown className="size-5 ml-1" />
+                Descubre mi trabajo <CircleArrowDown className="size-5" />
               </Button>
             </motion.div>
           </a>
