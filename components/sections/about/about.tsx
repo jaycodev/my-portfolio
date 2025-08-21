@@ -93,4 +93,5 @@ const ProfileImage = ({
     </div>
   </div>
 );
+
 export default About;
