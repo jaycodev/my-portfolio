@@ -126,10 +126,10 @@ const Projects = () => {
       githubUrl: "https://github.com/jaycodev/bookstudio",
     },
     {
-      title: "Medical appointments",
+      title: "MediDesk",
       description:
         "Aplicación web para la gestión de citas médicas, con programación en calendario.",
-      image: "/images/projects/medical-appointments.webp",
+      image: "/images/projects/medidesk.webp",
       technologies: [
         { label: "C#", icon: CSharpLogo },
         { label: ".NET Core", icon: DotNetCoreLogo },
@@ -137,7 +137,7 @@ const Projects = () => {
         { label: "Bootstrap", icon: BootstrapLogo },
         { label: "Cloudinary", icon: CloudinaryLogo },
       ],
-      githubUrl: "https://github.com/jaycodev/medical-appointments",
+      githubUrl: "https://github.com/jaycodev/medidesk",
     },
     {
       title: "CodeLoop",
