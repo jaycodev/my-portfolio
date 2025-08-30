@@ -126,21 +126,6 @@ const Projects = () => {
       githubUrl: "https://github.com/jaycodev/bookstudio",
     },
     {
-      title: "Mobilnet",
-      description:
-        "Aplicación web para el registro RUC10 en redes GPON, que incorpora visualización de datos mediante gráficos.",
-      image: "/images/projects/mobilnet.webp",
-      technologies: [
-        { label: "Java", icon: JavaLogo },
-        { label: "Spring Boot", icon: SpringBootLogo },
-        { label: "Thymeleaf", icon: ThymeleafLogo },
-        { label: "Bootstrap", icon: BootstrapLogo },
-        { label: "MySQL", icon: MySQLLogo },
-      ],
-      liveUrl: "https://mobilnet.onrender.com",
-      githubUrl: "https://github.com/jaycodev/mobilnet",
-    },
-    {
       title: "Medical appointments",
       description:
         "Aplicación web para la gestión de citas médicas, con programación en calendario.",
@@ -155,18 +140,34 @@ const Projects = () => {
       githubUrl: "https://github.com/jaycodev/medical-appointments",
     },
     {
-      title: "Course platform",
+      title: "CodeLoop",
       description:
         "Plataforma online para cursos dirigida a estudiantes, que permite la administración de contenidos.",
-      image: "/images/placeholder.svg",
+      image: "/images/projects/codeloop.webp",
+      technologies: [
+        { label: "TypeScript", icon: TypeScriptLogo },
+        { label: "Angular", icon: AngularLogo },
+        { label: "Java", icon: JavaLogo },
+        { label: "Spring Boot", icon: SpringBootLogo },
+        { label: "Tailwind CSS", icon: TailwindLogo },
+        { label: "MySQL", icon: MySQLLogo },
+      ],
+      githubUrl: "https://github.com/jaycodev/codeloop",
+    },
+    {
+      title: "Mobilnet",
+      description:
+        "Aplicación web para el registro RUC10 en redes GPON, que incorpora visualización de datos mediante gráficos.",
+      image: "/images/projects/mobilnet.webp",
       technologies: [
         { label: "Java", icon: JavaLogo },
         { label: "Spring Boot", icon: SpringBootLogo },
-        { label: "Angular", icon: AngularLogo },
-        { label: "Tailwind CSS", icon: TailwindLogo },
-        { label: "Shadcn UI", icon: ShadcnLogo },
+        { label: "Thymeleaf", icon: ThymeleafLogo },
+        { label: "Bootstrap", icon: BootstrapLogo },
+        { label: "MySQL", icon: MySQLLogo },
       ],
-      githubUrl: "https://github.com/jaycodev/course-platform",
+      liveUrl: "https://mobilnet.onrender.com",
+      githubUrl: "https://github.com/jaycodev/mobilnet",
     },
   ];
 
