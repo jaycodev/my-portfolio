@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Download } from "lucide-react";
+import { FileText } from "lucide-react";
 import type { HTMLAttributes } from "react";
 import { GithubLogo } from "../../icons";
 import { motion } from "framer-motion";
@@ -66,10 +66,16 @@ const About = () => {
                   Ver Github
                 </Button>
               </a>
-              <Button variant="outline" className="rounded-full">
-                <Download />
-                Descargar CV
-              </Button>
+              <a
+                href="/cv/cv-jason-vila.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" className="rounded-full">
+                  <FileText />
+                  Ver CV
+                </Button>
+              </a>
             </div>
           </div>
         </div>
