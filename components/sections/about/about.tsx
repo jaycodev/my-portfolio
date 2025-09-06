@@ -29,7 +29,7 @@ const About = () => {
             </Badge>
             <ProfileImage className="mt-3 mb-8 block md:hidden" />
             <h2 className="text-4xl font-bold mb-4 tracking-tight">
-              Desarrollador <span className="whitespace-nowrap">Front-end</span>
+              Desarrollador <span className="whitespace-nowrap">Full Stack</span>
             </h2>
             <p className="text-muted-foreground mb-6 text-justify">
               Me llamo <strong>Jason Vila</strong> y actualmente estudio{" "}

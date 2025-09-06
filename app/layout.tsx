@@ -6,9 +6,9 @@ import { Footer } from "@/components/sections";
 import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
-  title: "Portafolio de jaycodev - Desarrollador Front-end",
+  title: "Portafolio de jaycodev - Desarrollador Full Stack",
   description:
-    "Portafolio de jaycodev, desarrollador Front-end. Descubre proyectos, habilidades y contacto para colaboración y aprendizaje.",
+    "Portafolio de jaycodev, desarrollador Full Stack. Descubre proyectos, habilidades y contacto para colaboración y aprendizaje.",
 };
 
 export default function RootLayout({
