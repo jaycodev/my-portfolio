@@ -32,7 +32,7 @@ const Hero = () => {
         >
           <Badge className="rounded-full border-none">
             <Zap className="fill-current" />
-            Desarrollador Front-end
+            Desarrollador Full Stack
           </Badge>
         </motion.div>
 
