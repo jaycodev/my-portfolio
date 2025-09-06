@@ -51,9 +51,10 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.24, ease: "easeOut" }}
         >
-          Estudiante de <strong>Computación e Informática</strong>, apasionado
-          por la creación de <strong>aplicaciones web modernas</strong> con
-          diseño intuitivo y <strong>código limpio</strong>.
+          Creo soluciones <strong>robustas y escalables</strong>, enfocadas en
+          la{" "}
+          <strong>eficiencia, la calidad y la experiencia del usuario</strong>,
+          siempre buscando <strong>innovar y aprender</strong>.
         </motion.p>
 
         <div className="mt-12 flex flex-col items-center gap-4">
