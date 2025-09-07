@@ -10,6 +10,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const About = () => {
+  const Highlight = ({ children }: { children: React.ReactNode }) => (
+    <span className="text-foreground">{children}</span>
+  );
+
   return (
     <motion.section
       id="about"
@@ -29,30 +33,33 @@ const About = () => {
             </Badge>
             <ProfileImage className="mt-3 mb-8 block md:hidden" />
             <h2 className="text-4xl font-bold mb-4 tracking-tight">
-              Desarrollador <span className="whitespace-nowrap">Full Stack</span>
+              Desarrollador{" "}
+              <span className="whitespace-nowrap">Full Stack</span>
             </h2>
             <p className="text-muted-foreground mb-6 text-justify">
-              Me llamo <strong>Jason Vila</strong> y actualmente estudio{" "}
-              <strong>Computación e Informática</strong> en{" "}
+              Me llamo <Highlight>Jason Vila</Highlight> y actualmente estudio{" "}
+              <Highlight>Computación e Informática</Highlight> en{" "}
               <a
-                href="https://www.cibertec.edu.pe/"
+                href="https://www.cibertec.edu.pe"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline hover:text-foreground"
+                className="hover:underline text-foreground"
               >
                 CIBERTEC
               </a>
-              . Me apasiona la <strong>programación</strong> y la creación de
-              aplicaciones bien estructuradas, enfocándome en proyectos{" "}
-              <strong>escalables</strong> con tecnologías modernas y manteniendo
-              un <strong>código limpio</strong> y buenas prácticas.
+              . Me apasiona la <Highlight>programación</Highlight> y la creación
+              de aplicaciones bien estructuradas, enfocándome en proyectos{" "}
+              <Highlight>escalables</Highlight> con tecnologías modernas y
+              manteniendo un <Highlight>código limpio</Highlight> y buenas
+              prácticas.
             </p>
+
             <p className="text-muted-foreground mb-6 text-justify">
-              Me motiva seguir aprendiendo,{" "}
-              <strong>compartir conocimientos</strong> y construir soluciones
-              que realmente funcionen en el mundo real, dejando un impacto
-              positivo tanto en los proyectos como en la comunidad de
-              desarrolladores.
+              Me motiva seguir <Highlight>aprendiendo</Highlight>,{" "}
+              <Highlight>compartir conocimientos</Highlight> y construir
+              <Highlight> soluciones reales</Highlight> que dejen un impacto
+              positivo en los proyectos y en la{" "}
+              <Highlight>comunidad de desarrolladores</Highlight>.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-start">
