@@ -7,10 +7,8 @@ import {
   GithubLogo,
   ReactLogo,
   TypeScriptLogo,
-  ViteLogo,
   ShadcnLogo,
   TailwindLogo,
-  TanstackLogo,
   SpringBootLogo,
   ThymeleafLogo,
   BootstrapLogo,
@@ -21,6 +19,7 @@ import {
   AngularLogo,
   JavaLogo,
   CSharpLogo,
+  NextJsLogo,
 } from "@/components/icons";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -116,11 +115,10 @@ const Projects = () => {
       image: "/images/projects/bookstudio.webp",
       technologies: [
         { label: "TypeScript", icon: TypeScriptLogo },
+        { label: "Next.js", icon: NextJsLogo },
         { label: "React", icon: ReactLogo },
-        { label: "Vite", icon: ViteLogo },
-        { label: "Shadcn UI", icon: ShadcnLogo },
         { label: "Tailwind CSS", icon: TailwindLogo },
-        { label: "Tanstack Router", icon: TanstackLogo },
+        { label: "Shadcn UI", icon: ShadcnLogo },
       ],
       liveUrl: "https://bookstudio-dev.vercel.app",
       githubUrl: "https://github.com/jaycodev/bookstudio",
@@ -133,9 +131,9 @@ const Projects = () => {
       technologies: [
         { label: "C#", icon: CSharpLogo },
         { label: ".NET Core", icon: DotNetCoreLogo },
-        { label: "SQL Server", icon: SQLServerLogo },
         { label: "Bootstrap", icon: BootstrapLogo },
         { label: "Cloudinary", icon: CloudinaryLogo },
+        { label: "SQL Server", icon: SQLServerLogo },
       ],
       githubUrl: "https://github.com/jaycodev/medidesk",
     },
@@ -147,9 +145,9 @@ const Projects = () => {
       technologies: [
         { label: "TypeScript", icon: TypeScriptLogo },
         { label: "Angular", icon: AngularLogo },
+        { label: "Tailwind CSS", icon: TailwindLogo },
         { label: "Java", icon: JavaLogo },
         { label: "Spring Boot", icon: SpringBootLogo },
-        { label: "Tailwind CSS", icon: TailwindLogo },
         { label: "MySQL", icon: MySQLLogo },
       ],
       githubUrl: "https://github.com/jaycodev/codeloop",
