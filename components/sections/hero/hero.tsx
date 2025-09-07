@@ -66,7 +66,7 @@ const Hero = () => {
           >
             <div className="rounded-full bg-background">
               <motion.a
-                href="mailto:jasonvilac@gmail.com"
+                href="mailto:jason.vilac@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >

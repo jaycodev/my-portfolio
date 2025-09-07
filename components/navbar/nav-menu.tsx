@@ -59,7 +59,7 @@ export const NavMenu = ({ className, ...props }: NavigationMenuProps) => {
         <NavigationMenuItem>
           <NavigationMenuLinkPrimitive asChild>
             <a
-              href="mailto:jasonvilac@gmail.com"
+              href="mailto:jason.vilac@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >

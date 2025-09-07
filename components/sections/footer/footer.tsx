@@ -42,7 +42,7 @@ const Footer = () => {
             ))}
             <li>
               <a
-                href="mailto:jasonvilac@gmail.com"
+                href="mailto:jason.vilac@gmail.com"
                 className="text-muted-foreground transition-colors duration-200 ease-in-out hover:text-foreground"
                 target="_blank"
                 rel="noopener noreferrer"
