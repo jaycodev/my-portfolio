@@ -135,6 +135,7 @@ const Projects = () => {
         { label: "Cloudinary", icon: CloudinaryLogo },
         { label: "SQL Server", icon: SQLServerLogo },
       ],
+      liveUrl: "https://medidesk.onrender.com",
       githubUrl: "https://github.com/jaycodev/medidesk",
     },
     {
