@@ -1,7 +1,8 @@
-import { NavMenu } from "./nav-menu";
-import { NavigationSheet } from "./navigation-sheet";
-import { ModeToggle } from "../ui/mode-toggle";
-import { CodeXml } from "lucide-react";
+import { CodeXml } from 'lucide-react'
+
+import { ModeToggle } from '../ui/mode-toggle'
+import { NavMenu } from './nav-menu'
+import { NavigationSheet } from './navigation-sheet'
 
 const Navbar = () => {
   return (
@@ -25,7 +26,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

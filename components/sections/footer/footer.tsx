@@ -1,22 +1,23 @@
-import { Separator } from "@/components/ui/separator";
-import { GithubLogo, LinkedinLogo } from "@/components/icons";
-import { CodeXml } from "lucide-react";
-import Link from "next/link";
+import { CodeXml } from 'lucide-react'
+import Link from 'next/link'
+
+import { GithubLogo, LinkedinLogo } from '@/components/icons'
+import { Separator } from '@/components/ui/separator'
 
 const footerLinks = [
   {
-    title: "Inicio",
-    href: "#home",
+    title: 'Inicio',
+    href: '#home',
   },
   {
-    title: "Proyectos",
-    href: "#projects",
+    title: 'Proyectos',
+    href: '#projects',
   },
   {
-    title: "Sobre mí",
-    href: "#about",
+    title: 'Sobre mí',
+    href: '#about',
   },
-];
+]
 
 const Footer = () => {
   return (
@@ -55,9 +56,7 @@ const Footer = () => {
         <Separator />
         <div className="py-6 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0">
           {/* Copyright */}
-          <span className="text-muted-foreground">
-            Jason Vila - {new Date().getFullYear()}
-          </span>
+          <span className="text-muted-foreground">Jason Vila - {new Date().getFullYear()}</span>
 
           <div className="flex items-center gap-5 text-muted-foreground">
             <a
@@ -80,7 +79,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

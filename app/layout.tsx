@@ -1,29 +1,26 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/navbar";
-import { Footer } from "@/components/sections";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import { ThemeProvider } from 'next-themes'
 
-import { ThemeProvider } from "next-themes";
+import Navbar from '@/components/navbar'
+import { Footer } from '@/components/sections'
+
+import './globals.css'
 
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-  weight: "400",
-});
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+  weight: '400',
+})
 
 export const metadata: Metadata = {
-  title: "Portafolio de jaycodev - Desarrollador Full Stack",
+  title: 'Portafolio de jaycodev - Desarrollador Full Stack',
   description:
-    "Portafolio de jaycodev, desarrollador Full Stack. Descubre proyectos, habilidades y contacto para colaboración y aprendizaje.",
-};
+    'Portafolio de jaycodev, desarrollador Full Stack. Descubre proyectos, habilidades y contacto para colaboración y aprendizaje.',
+}
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
@@ -72,5 +69,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

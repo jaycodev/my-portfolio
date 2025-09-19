@@ -1,12 +1,13 @@
-"use client";
+'use client'
 
-import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { CircleArrowDown, Mail, Zap } from "lucide-react";
-import { LinkedinLogo } from "@/components/icons";
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
+import { CircleArrowDown, Mail, Zap } from 'lucide-react'
+
+import { LinkedinLogo } from '@/components/icons'
+import AnimatedGridPattern from '@/components/ui/animated-grid-pattern'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 
 const Hero = () => {
   return (
@@ -19,15 +20,15 @@ const Hero = () => {
         maxOpacity={0.1}
         duration={3}
         className={cn(
-          "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
-          "inset-x-0 h-full skew-y-12"
+          '[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]',
+          'inset-x-0 h-full skew-y-12'
         )}
       />
       <div className="relative z-[1] text-center max-w-screen-md">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
           className="flex justify-center"
         >
           <Badge className="rounded-full border-none">
@@ -40,7 +41,7 @@ const Hero = () => {
           className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.12, ease: "easeOut" }}
+          transition={{ duration: 0.7, delay: 0.12, ease: 'easeOut' }}
         >
           Hey, soy Jason
         </motion.h1>
@@ -49,12 +50,11 @@ const Hero = () => {
           className="mt-6 text-[17px] md:text-lg"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.24, ease: "easeOut" }}
+          transition={{ duration: 0.7, delay: 0.24, ease: 'easeOut' }}
         >
-          Creo soluciones <strong>robustas y escalables</strong>, enfocadas en
-          la{" "}
-          <strong>eficiencia, la calidad y la experiencia del usuario</strong>,
-          siempre buscando <strong>innovar y aprender</strong>.
+          Creo soluciones <strong>robustas y escalables</strong>, enfocadas en la{' '}
+          <strong>eficiencia, la calidad y la experiencia del usuario</strong>, siempre buscando{' '}
+          <strong>innovar y aprender</strong>.
         </motion.p>
 
         <div className="mt-12 flex flex-col items-center gap-4">
@@ -62,7 +62,7 @@ const Hero = () => {
             className="flex gap-4"
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.36, ease: "easeOut" }}
+            transition={{ duration: 0.7, delay: 0.36, ease: 'easeOut' }}
           >
             <div className="rounded-full bg-background">
               <motion.a
@@ -93,7 +93,7 @@ const Hero = () => {
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.48, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.48, ease: 'easeOut' }}
             >
               <Button className="rounded-full text-base">
                 Descubre mi trabajo <CircleArrowDown className="size-5" />
@@ -103,7 +103,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

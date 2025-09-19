@@ -1,18 +1,20 @@
-"use client";
+'use client'
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { FileText } from "lucide-react";
-import type { HTMLAttributes } from "react";
-import { GithubLogo } from "../../icons";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { motion } from 'framer-motion'
+import { FileText } from 'lucide-react'
+import Image from 'next/image'
+import type { HTMLAttributes } from 'react'
+
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
+
+import { GithubLogo } from '../../icons'
 
 const About = () => {
   const Highlight = ({ children }: { children: React.ReactNode }) => (
     <span className="text-foreground">{children}</span>
-  );
+  )
 
   return (
     <motion.section
@@ -20,7 +22,7 @@ const About = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
       className="relative py-25 px-6"
     >
       <div className="max-w-screen-md mx-auto">
@@ -33,12 +35,11 @@ const About = () => {
             </Badge>
             <ProfileImage className="mt-3 mb-8 block md:hidden" />
             <h2 className="text-4xl font-bold mb-4 tracking-tight">
-              Desarrollador{" "}
-              <span className="whitespace-nowrap">Full Stack</span>
+              Desarrollador <span className="whitespace-nowrap">Full Stack</span>
             </h2>
             <p className="text-muted-foreground mb-6 text-justify">
-              Me llamo <Highlight>Jason Vila</Highlight> y actualmente estudio{" "}
-              <Highlight>Computación e Informática</Highlight> en{" "}
+              Me llamo <Highlight>Jason Vila</Highlight> y actualmente estudio{' '}
+              <Highlight>Computación e Informática</Highlight> en{' '}
               <a
                 href="https://www.cibertec.edu.pe"
                 target="_blank"
@@ -47,37 +48,27 @@ const About = () => {
               >
                 CIBERTEC
               </a>
-              . Me apasiona la <Highlight>programación</Highlight> y la creación
-              de aplicaciones bien estructuradas, enfocándome en proyectos{" "}
-              <Highlight>escalables</Highlight> con tecnologías modernas y
-              manteniendo un <Highlight>código limpio</Highlight> y buenas
+              . Me apasiona la <Highlight>programación</Highlight> y la creación de aplicaciones
+              bien estructuradas, enfocándome en proyectos <Highlight>escalables</Highlight> con
+              tecnologías modernas y manteniendo un <Highlight>código limpio</Highlight> y buenas
               prácticas.
             </p>
 
             <p className="text-muted-foreground mb-6 text-justify">
-              Me motiva seguir <Highlight>aprendiendo</Highlight>,{" "}
+              Me motiva seguir <Highlight>aprendiendo</Highlight>,{' '}
               <Highlight>compartir conocimientos</Highlight> y construir
-              <Highlight> soluciones reales</Highlight> que dejen un impacto
-              positivo en los proyectos y en la{" "}
-              <Highlight>comunidad de desarrolladores</Highlight>.
+              <Highlight> soluciones reales</Highlight> que dejen un impacto positivo en los
+              proyectos y en la <Highlight>comunidad de desarrolladores</Highlight>.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-start">
-              <a
-                href="https://github.com/jaycodev"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://github.com/jaycodev" target="_blank" rel="noopener noreferrer">
                 <Button className="rounded-full">
                   <GithubLogo />
                   Ver Github
                 </Button>
               </a>
-              <a
-                href="/cv/cv-jason-vila.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="/cv/cv-jason-vila.pdf" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" className="rounded-full">
                   <FileText />
                   Ver CV
@@ -88,14 +79,11 @@ const About = () => {
         </div>
       </div>
     </motion.section>
-  );
-};
+  )
+}
 
-const ProfileImage = ({
-  className,
-  ...props
-}: HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn("mt-10 w-48 h-48 md:w-64 md:h-64", className)} {...props}>
+const ProfileImage = ({ className, ...props }: HTMLAttributes<HTMLDivElement>) => (
+  <div className={cn('mt-10 w-48 h-48 md:w-64 md:h-64', className)} {...props}>
     <div className="relative w-full h-full rounded-2xl overflow-hidden bg-accent">
       <Image
         src="/images/placeholder.svg"
@@ -105,6 +93,6 @@ const ProfileImage = ({
       />
     </div>
   </div>
-);
+)
 
-export default About;
+export default About
