@@ -1,10 +1,11 @@
 import { CodeXml } from 'lucide-react'
 
-import { ModeToggle } from '../ui/mode-toggle'
+import { ModeToggle } from '@/components/ui/mode-toggle'
+
 import { NavMenu } from './nav-menu'
 import { NavigationSheet } from './navigation-sheet'
 
-const Navbar = () => {
+export function Navbar() {
   return (
     <nav className="fixed z-10 top-6 inset-x-4 h-14 bg-background border max-w-screen-md mx-auto rounded-full">
       <div className="h-full flex items-center justify-between mx-auto px-3">
@@ -28,5 +29,3 @@ const Navbar = () => {
     </nav>
   )
 }
-
-export default Navbar

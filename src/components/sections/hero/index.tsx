@@ -4,12 +4,12 @@ import { motion } from 'framer-motion'
 import { CircleArrowDown, Mail, Zap } from 'lucide-react'
 
 import { LinkedinLogo } from '@/components/icons'
-import AnimatedGridPattern from '@/components/ui/animated-grid-pattern'
+import { AnimatedGridPattern } from '@/components/ui/animated-grid-pattern'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
-const Hero = () => {
+export function Hero() {
   return (
     <div
       id="home"
@@ -105,5 +105,3 @@ const Hero = () => {
     </div>
   )
 }
-
-export default Hero

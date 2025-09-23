@@ -99,7 +99,7 @@ const ProjectCard = ({
   )
 }
 
-const Projects = () => {
+export function Projects() {
   const projects = [
     {
       title: 'BookStudio',
@@ -192,5 +192,3 @@ const Projects = () => {
     </motion.section>
   )
 }
-
-export default Projects

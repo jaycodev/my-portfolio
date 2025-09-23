@@ -12,7 +12,7 @@ import {
 import { useActiveSection } from '@/hooks/use-active-section'
 import { cn } from '@/lib/utils'
 
-export const NavMenu = ({ className, ...props }: NavigationMenuProps) => {
+export function NavMenu({ className, ...props }: NavigationMenuProps) {
   const activeId = useActiveSection(['home', 'projects', 'about', 'contact'])
 
   return (

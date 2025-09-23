@@ -5,13 +5,25 @@ import { FileText } from 'lucide-react'
 import Image from 'next/image'
 import type { HTMLAttributes } from 'react'
 
+import { GithubLogo } from '@/components/icons'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
-import { GithubLogo } from '../../icons'
+const ProfileImage = ({ className, ...props }: HTMLAttributes<HTMLDivElement>) => (
+  <div className={cn('mt-10 w-48 h-48 md:w-64 md:h-64', className)} {...props}>
+    <div className="relative w-full h-full rounded-2xl overflow-hidden bg-accent">
+      <Image
+        src="/images/placeholder.svg"
+        alt="Foto de perfil de Jason Vila"
+        className="object-cover"
+        fill
+      />
+    </div>
+  </div>
+)
 
-const About = () => {
+export function About() {
   const Highlight = ({ children }: { children: React.ReactNode }) => (
     <span className="text-foreground">{children}</span>
   )
@@ -81,18 +93,3 @@ const About = () => {
     </motion.section>
   )
 }
-
-const ProfileImage = ({ className, ...props }: HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn('mt-10 w-48 h-48 md:w-64 md:h-64', className)} {...props}>
-    <div className="relative w-full h-full rounded-2xl overflow-hidden bg-accent">
-      <Image
-        src="/images/placeholder.svg"
-        alt="Foto de perfil de Jason Vila"
-        className="object-cover"
-        fill
-      />
-    </div>
-  </div>
-)
-
-export default About

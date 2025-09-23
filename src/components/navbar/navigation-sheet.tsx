@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 import { NavMenu } from './nav-menu'
 
-export const NavigationSheet = () => {
+export function NavigationSheet() {
   return (
     <Sheet>
       <SheetTrigger asChild>

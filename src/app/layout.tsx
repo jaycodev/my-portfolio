@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
 
-import Navbar from '@/components/navbar'
+import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/sections'
 
 import './globals.css'
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     'Portafolio de jaycodev, desarrollador Full Stack. Descubre proyectos, habilidades y contacto para colaboración y aprendizaje.',
   icons: {
     icon: [
-      { url: '/favicon-dark.svg', media: '(prefers-color-scheme: light)', type: 'image/svg+xml' },
-      { url: '/favicon-light.svg', media: '(prefers-color-scheme: dark)', type: 'image/svg+xml' },
+      { url: '/favicon-light.svg', media: '(prefers-color-scheme: light)', type: 'image/svg+xml' },
+      { url: '/favicon-dark.svg', media: '(prefers-color-scheme: dark)', type: 'image/svg+xml' },
     ],
   },
 }
@@ -49,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <meta name="theme-color" content="oklch(0.141 0.005 285.823)" />
       </head>
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${inter.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableColorScheme
         >
           <Navbar />
-          <main>{children}</main>
+          {children}
           <Footer />
         </ThemeProvider>
       </body>

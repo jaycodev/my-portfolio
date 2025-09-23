@@ -19,7 +19,7 @@ const footerLinks = [
   },
 ]
 
-const Footer = () => {
+export function Footer() {
   return (
     <footer className="mt-20">
       <div className="max-w-screen-md mx-auto">
@@ -81,5 +81,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default Footer

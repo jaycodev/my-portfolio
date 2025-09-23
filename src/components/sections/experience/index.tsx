@@ -53,7 +53,7 @@ const ExperienceItem = ({
   )
 }
 
-const Experience = () => {
+export function Experience() {
   const experiences = [
     {
       title: 'Senior Full Stack Developer',
@@ -110,5 +110,3 @@ const Experience = () => {
     </motion.section>
   )
 }
-
-export default Experience

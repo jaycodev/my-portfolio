@@ -11,7 +11,7 @@ export default defineConfig([
   js.configs.recommended,
 
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['src/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {

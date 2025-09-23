@@ -19,7 +19,7 @@ interface AnimatedGridPatternProps {
   repeatDelay?: number
 }
 
-export default function AnimatedGridPattern({
+export function AnimatedGridPattern({
   width = 40,
   height = 40,
   x = -1,
@@ -58,7 +58,6 @@ export default function AnimatedGridPattern({
     }
   }, [dimensions, numSquares, generateSquares])
 
-  // actualizar posición de un cuadrado
   const updateSquarePosition = (id: number) => {
     setSquares((currentSquares) =>
       currentSquares.map((sq) =>
