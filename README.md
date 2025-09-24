@@ -7,7 +7,7 @@
 
 <div align="center">
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
-![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=flat&logo=shadcn/ui&logoColor=white)
+![Astro](https://img.shields.io/badge/Astro-17101a?style=flat&logo=astro&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-38bcf9?logo=tailwindcss&logoColor=white&style=flat)
 
 </div>

@@ -1,0 +1,138 @@
+---
+import ThemeToggle from "../ui/ThemeToggle.astro";
+
+const navItems = [
+  {
+    title: "Inicio",
+    label: "inicio",
+    url: "/#inicio",
+  },
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#proyectos",
+  },
+  {
+    title: "Sobre mí",
+    label: "sobre-mi",
+    url: "/#sobre-mi",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "mailto:jason.vilac@gmail.com",
+  },
+];
+---
+
+<header
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+>
+  <nav
+    class="flex px-3 text-sm font-medium rounded-full justify-center items-center"
+  >
+    {
+      navItems.map((link) => (
+        <a
+          class="relative block px-2 py-2 transition-colors text-muted-foreground hover:text-primary nav-item"
+          aria-label={link.label}
+          href={link.url}
+          data-target={link.label}
+        >
+          {link.title}
+        </a>
+      ))
+    }
+    <ThemeToggle />
+  </nav>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navItems = document.querySelectorAll(".nav-item");
+
+    function updateActiveNav() {
+      const sections = document.querySelectorAll("section[id]");
+      const scrollPos = window.scrollY + 100;
+
+      let currentSection = "inicio";
+
+      sections.forEach((section) => {
+        const sectionTop = (section as HTMLElement).offsetTop;
+        const sectionHeight = (section as HTMLElement).offsetHeight;
+
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+          currentSection = section.id;
+        }
+      });
+
+      navItems.forEach((item) => {
+        const target = item.getAttribute("data-target");
+        if (target === currentSection) {
+          item.classList.add("text-primary");
+          item.classList.remove("text-muted-foreground");
+        } else {
+          item.classList.remove("text-primary");
+          item.classList.add("text-muted-foreground");
+        }
+      });
+    }
+
+    let scrollTimeout: NodeJS.Timeout;
+    window.addEventListener("scroll", () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(updateActiveNav, 10);
+    });
+
+    updateActiveNav();
+  });
+</script>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+    background-color: rgb(242 244 247 / 0);
+    border: 1px solid transparent;
+  }
+
+  nav:is(.dark *) {
+    animation-name: nav-shadown-dark;
+    background-color: rgb(39 38 51 / 0);
+  }
+
+  @keyframes nav-shadown {
+    0% {
+      background-color: rgb(242 244 247 / 0);
+      box-shadow: none;
+      backdrop-filter: none;
+      border-color: transparent;
+    }
+    to {
+      background-color: rgb(242 244 247 / 0.8);
+      box-shadow:
+        0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+      backdrop-filter: blur(8px);
+      border-color: var(--border);
+    }
+  }
+
+  @keyframes nav-shadown-dark {
+    0% {
+      background-color: rgb(39 38 51 / 0);
+      box-shadow: none;
+      backdrop-filter: none;
+      border-color: transparent;
+    }
+    to {
+      background-color: rgb(39 38 51 / 0.95);
+      box-shadow:
+        0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+      backdrop-filter: blur(8px);
+      border-color: var(--border);
+    }
+  }
+</style>

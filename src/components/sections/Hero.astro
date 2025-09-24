@@ -1,0 +1,72 @@
+---
+import { LinkedIn, Mail, CircleArrowDown } from "@/components/icons";
+import { Button } from "@/components/ui";
+---
+
+<section
+  id="inicio"
+  class="relative min-h-screen flex items-center justify-center px-6 pt-6 overflow-hidden"
+>
+  <div class="relative z-[1] text-center max-w-screen-md">
+    <div class="flex justify-center">
+      <div class="flex items-center">
+        <span class="relative inline-flex overflow-hidden rounded-full p-[1px]">
+          <span
+            class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#C7D2FE_0%,#4338CA_50%,#C7D2FE_100%)]"
+          ></span>
+          <div
+            class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-indigo-800 bg-indigo-100 rounded-full dark:bg-gray-900 dark:text-gray-300 backdrop-blur-3xl whitespace-nowrap"
+          >
+            Desarrollador Full Stack
+          </div>
+        </span>
+      </div>
+    </div>
+
+    <h1
+      class="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight text-gray-800 dark:text-white"
+    >
+      Hey, soy Jason
+    </h1>
+
+    <p
+      class="mt-6 text-[17px] md:text-lg text-muted-foreground [&>strong]:text-indigo-800 dark:[&>strong]:text-indigo-300"
+    >
+      Creo soluciones <strong>robustas y escalables</strong>, enfocadas en la
+      eficiencia, la calidad y la experiencia del usuario, siempre buscando <strong
+        >innovar y aprender</strong
+      >.
+    </p>
+
+    <div class="mt-12 flex flex-col items-center gap-4">
+      <div class="flex gap-4">
+        <a
+          href="mailto:jason.vilac@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button variant="secondary">
+            <Mail class="size-4" /> Contáctame
+          </Button>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/jason-vila"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button variant="secondary" disabled>
+            <LinkedIn class="size-4" /> LinkedIn
+          </Button>
+        </a>
+      </div>
+
+      <a href="#proyectos" aria-label="Ir a proyectos">
+        <Button>
+          <CircleArrowDown class="size-4" />
+          Descubre mi trabajo
+        </Button>
+      </a>
+    </div>
+  </div>
+</section>

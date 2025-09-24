@@ -1,0 +1,83 @@
+---
+import { Github, LinkedIn, CodeXml } from "../icons";
+import Separator from "../ui/Separator.astro";
+
+const footerLinks = [
+  {
+    title: "Inicio",
+    href: "#inicio",
+  },
+  {
+    title: "Proyectos",
+    href: "#proyectos",
+  },
+  {
+    title: "Sobre mí",
+    href: "#sobre-mi",
+  },
+];
+---
+
+<footer class="mt-20">
+  <div class="max-w-screen-md mx-auto">
+    <div class="py-12 flex flex-col justify-start items-center">
+      <!-- Logo -->
+      <div class="flex items-center gap-2 font-bold text-lg md:text-xl">
+        <CodeXml class="size-6" />
+        jaycodev
+      </div>
+
+      <ul class="mt-6 flex items-center gap-4 flex-wrap">
+        {
+          footerLinks.map(({ title, href }) => (
+            <li>
+              <a
+                href={href}
+                class="text-muted-foreground transition-colors duration-200 ease-in-out hover:text-primary"
+              >
+                {title}
+              </a>
+            </li>
+          ))
+        }
+        <li>
+          <a
+            href="mailto:jason.vilac@gmail.com"
+            class="text-muted-foreground transition-colors duration-200 ease-in-out hover:text-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contacto
+          </a>
+        </li>
+      </ul>
+    </div>
+    <Separator />
+    <div
+      class="py-6 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0"
+    >
+      <span class="text-muted-foreground"
+        >Jason Vila - {new Date().getFullYear()}</span
+      >
+
+      <div class="flex items-center gap-5 text-muted-foreground">
+        <a
+          href="https://github.com/jaycodev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition-colors duration-200 ease-in-out hover:text-primary"
+        >
+          <Github class="size-5" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/jason-vila"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition-colors duration-200 ease-in-out hover:text-primary"
+        >
+          <LinkedIn class="size-5" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

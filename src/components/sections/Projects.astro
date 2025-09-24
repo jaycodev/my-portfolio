@@ -1,0 +1,160 @@
+---
+import {
+  Angular,
+  Bootstrap,
+  Cloudinary,
+  CSharp,
+  DotNetCore,
+  Github,
+  Java,
+  MySQL,
+  NextJs,
+  React,
+  Shadcn,
+  SpringBoot,
+  SQLServer,
+  Tailwind,
+  Thymeleaf,
+  TypeScript,
+  ExternalLink,
+} from "@/components/icons";
+import { Badge, Button } from "@/components/ui";
+
+const projects = [
+  {
+    title: "BookStudio",
+    description:
+      "Plataforma web para la gestión y préstamo de libros en bibliotecas, con panel administrativo.",
+    image: "/images/projects/bookstudio.webp",
+    technologies: [
+      { label: "TypeScript", icon: TypeScript },
+      { label: "Next.js", icon: NextJs },
+      { label: "React", icon: React },
+      { label: "Tailwind CSS", icon: Tailwind },
+      { label: "Shadcn UI", icon: Shadcn },
+    ],
+    liveUrl: "https://bookstudio-dev.vercel.app",
+    githubUrl: "https://github.com/jaycodev/bookstudio",
+  },
+  {
+    title: "MediDesk",
+    description:
+      "Aplicación web para la gestión de citas médicas, con programación en calendario.",
+    image: "/images/projects/medidesk.webp",
+    technologies: [
+      { label: "C#", icon: CSharp },
+      { label: ".NET Core", icon: DotNetCore },
+      { label: "Bootstrap", icon: Bootstrap },
+      { label: "Cloudinary", icon: Cloudinary },
+      { label: "SQL Server", icon: SQLServer },
+    ],
+    liveUrl: "https://medidesk.onrender.com",
+    githubUrl: "https://github.com/jaycodev/medidesk",
+  },
+  {
+    title: "CodeLoop",
+    description:
+      "Plataforma online para cursos dirigida a estudiantes, que permite la administración de contenidos.",
+    image: "/images/projects/codeloop.webp",
+    technologies: [
+      { label: "TypeScript", icon: TypeScript },
+      { label: "Angular", icon: Angular },
+      { label: "Tailwind CSS", icon: Tailwind },
+      { label: "Java", icon: Java },
+      { label: "Spring Boot", icon: SpringBoot },
+      { label: "MySQL", icon: MySQL },
+    ],
+    githubUrl: "https://github.com/jaycodev/codeloop",
+  },
+  {
+    title: "Mobilnet",
+    description:
+      "Aplicación web para el registro RUC10 en redes GPON, que incorpora visualización de datos mediante gráficos.",
+    image: "/images/projects/mobilnet.webp",
+    technologies: [
+      { label: "Java", icon: Java },
+      { label: "Spring Boot", icon: SpringBoot },
+      { label: "Thymeleaf", icon: Thymeleaf },
+      { label: "Bootstrap", icon: Bootstrap },
+      { label: "MySQL", icon: MySQL },
+    ],
+    liveUrl: "https://mobilnet.onrender.com",
+    githubUrl: "https://github.com/jaycodev/mobilnet",
+  },
+];
+---
+
+<section id="proyectos" class="relative py-25 px-6">
+  <div class="max-w-screen-md mx-auto">
+    <div class="text-center mb-12">
+      <Badge class="mb-4">Proyectos</Badge>
+      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">
+        Mis trabajos
+      </h2>
+      <p class="text-muted-foreground mt-2 sm:mt-4 text-lg">
+        Mostrando algunos de mis mejores proyectos y logros técnicos.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {
+        projects.map((project) => (
+          <div class="group relative flex flex-col overflow-hidden rounded-xl border transition-all hover:border-gray-400 dark:hover:border-white/30">
+            <div class="relative h-64 overflow-hidden bg-accent">
+              <img
+                src={project.image}
+                alt={project.title}
+                class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+
+            <div class="flex-1 flex flex-col p-6">
+              <h3 class="text-xl font-semibold mb-2">{project.title}</h3>
+              <p class="text-muted-foreground mb-4">{project.description}</p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                {project.technologies.map(({ label, icon: Icon }) => (
+                  <Badge
+                    key={label}
+                    variant="outline"
+                    class="flex items-center gap-1"
+                  >
+                    {Icon && <Icon class="size-3" />}
+                    {label}
+                  </Badge>
+                ))}
+              </div>
+
+              <div class="flex gap-3 mt-auto">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button>
+                      <ExternalLink class="size-4" />
+                      Demo
+                    </Button>
+                  </a>
+                )}
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="secondary">
+                      <Github class="size-4" />
+                      Código
+                    </Button>
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

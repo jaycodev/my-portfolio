@@ -1,5 +1,3 @@
-export * from './about'
-export * from './experience'
-export * from './footer'
-export * from './hero'
-export * from './projects'
+export { default as About } from "./About.astro";
+export { default as Hero } from "./Hero.astro";
+export { default as Projects } from "./Projects.astro";

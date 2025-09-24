@@ -1,0 +1,31 @@
+---
+import { cn } from "@/lib/utils";
+
+interface Props {
+  variant?: "default" | "outline";
+  class?: string;
+  [key: string]: any;
+}
+
+const {
+  variant = "default",
+  class: className = "",
+  ...rest
+} = Astro.props as Props;
+
+const variants =
+  variant === "default"
+    ? "bg-gray-100 dark:bg-white/10"
+    : "border bg-transparent";
+---
+
+<span
+  class={cn(
+    "inline-flex items-center justify-center px-2 py-0.5 rounded-full text-xs font-medium text-muted-foreground",
+    variants,
+    className
+  )}
+  {...rest}
+>
+  <slot />
+</span>

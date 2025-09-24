@@ -1,0 +1,55 @@
+---
+import "@fontsource-variable/onest";
+import "../styles/globals.css";
+
+import { Header, Footer } from "@/components/layout";
+---
+
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon-light.svg"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon-dark.svg"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <meta name="generator" content={Astro.generator} />
+    <title>Portafolio de jaycodev - Desarrollador Full Stack</title>
+
+    <script is:inline>
+      const theme =
+        localStorage.getItem("theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+      document.documentElement.classList.add(theme);
+
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) {
+        const themeColor = getComputedStyle(document.documentElement)
+          .getPropertyValue("--surface")
+          .trim();
+
+        meta.content = themeColor;
+      }
+    </script>
+    <meta name="theme-color" content="#09080a" />
+  </head>
+  <body class="min-h-screen w-full bg-background">
+    <Header />
+    <main class="space-y-10 sm:space-y-16">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
