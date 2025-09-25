@@ -35,9 +35,6 @@
       transparent
     ),
     white;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 100vh;
 }
 
 .bg-background:is(.dark *) {
