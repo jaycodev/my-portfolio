@@ -1,22 +1,22 @@
 ---
 import {
-  Angular,
-  Bootstrap,
-  Cloudinary,
-  CSharp,
-  DotNetCore,
-  ExternalLink,
-  Github,
-  Java,
-  MySQL,
-  NextJs,
-  React,
-  Shadcn,
-  SpringBoot,
-  SQLServer,
-  Tailwind,
-  Thymeleaf,
-  TypeScript,
+  AngularIcon,
+  BootstrapIcon,
+  CloudinaryIcon,
+  CSharpIcon,
+  DotNetCoreIcon,
+  ExternalLinkIcon,
+  GithubIcon,
+  JavaIcon,
+  MySQLIcon,
+  NextJsIcon,
+  ReactIcon,
+  ShadcnIcon,
+  SpringBootIcon,
+  SQLServerIcon,
+  TailwindIcon,
+  ThymeleafIcon,
+  TypeScriptIcon,
 } from '@/components/icons'
 import { Badge, Button } from '@/components/ui'
 
@@ -27,11 +27,11 @@ const projects = [
       'Plataforma web para la gestión y préstamo de libros en bibliotecas, con panel administrativo.',
     image: '/images/projects/bookstudio.webp',
     technologies: [
-      { label: 'TypeScript', icon: TypeScript },
-      { label: 'Next.js', icon: NextJs },
-      { label: 'React', icon: React },
-      { label: 'Tailwind CSS', icon: Tailwind },
-      { label: 'Shadcn UI', icon: Shadcn },
+      { label: 'TypeScript', icon: TypeScriptIcon },
+      { label: 'Next.js', icon: NextJsIcon },
+      { label: 'React', icon: ReactIcon },
+      { label: 'Tailwind CSS', icon: TailwindIcon },
+      { label: 'Shadcn UI', icon: ShadcnIcon },
     ],
     liveUrl: 'https://bookstudio-dev.vercel.app',
     githubUrl: 'https://github.com/jaycodev/bookstudio',
@@ -41,11 +41,11 @@ const projects = [
     description: 'Aplicación web para la gestión de citas médicas, con programación en calendario.',
     image: '/images/projects/medidesk.webp',
     technologies: [
-      { label: 'C#', icon: CSharp },
-      { label: '.NET Core', icon: DotNetCore },
-      { label: 'Bootstrap', icon: Bootstrap },
-      { label: 'Cloudinary', icon: Cloudinary },
-      { label: 'SQL Server', icon: SQLServer },
+      { label: 'C#', icon: CSharpIcon },
+      { label: '.NET Core', icon: DotNetCoreIcon },
+      { label: 'Bootstrap', icon: BootstrapIcon },
+      { label: 'Cloudinary', icon: CloudinaryIcon },
+      { label: 'SQL Server', icon: SQLServerIcon },
     ],
     liveUrl: 'https://medidesk.onrender.com',
     githubUrl: 'https://github.com/jaycodev/medidesk',
@@ -56,12 +56,12 @@ const projects = [
       'Plataforma online para cursos dirigida a estudiantes, que permite la administración de contenidos.',
     image: '/images/projects/codeloop.webp',
     technologies: [
-      { label: 'TypeScript', icon: TypeScript },
-      { label: 'Angular', icon: Angular },
-      { label: 'Tailwind CSS', icon: Tailwind },
-      { label: 'Java', icon: Java },
-      { label: 'Spring Boot', icon: SpringBoot },
-      { label: 'MySQL', icon: MySQL },
+      { label: 'TypeScript', icon: TypeScriptIcon },
+      { label: 'Angular', icon: AngularIcon },
+      { label: 'Tailwind CSS', icon: TailwindIcon },
+      { label: 'Java', icon: JavaIcon },
+      { label: 'Spring Boot', icon: SpringBootIcon },
+      { label: 'MySQL', icon: MySQLIcon },
     ],
     githubUrl: 'https://github.com/jaycodev/codeloop',
   },
@@ -71,11 +71,11 @@ const projects = [
       'Aplicación web para el registro RUC10 en redes GPON, que incorpora visualización de datos mediante gráficos.',
     image: '/images/projects/mobilnet.webp',
     technologies: [
-      { label: 'Java', icon: Java },
-      { label: 'Spring Boot', icon: SpringBoot },
-      { label: 'Thymeleaf', icon: Thymeleaf },
-      { label: 'Bootstrap', icon: Bootstrap },
-      { label: 'MySQL', icon: MySQL },
+      { label: 'Java', icon: JavaIcon },
+      { label: 'Spring Boot', icon: SpringBootIcon },
+      { label: 'Thymeleaf', icon: ThymeleafIcon },
+      { label: 'Bootstrap', icon: BootstrapIcon },
+      { label: 'MySQL', icon: MySQLIcon },
     ],
     liveUrl: 'https://mobilnet.onrender.com',
     githubUrl: 'https://github.com/jaycodev/mobilnet',
@@ -122,7 +122,7 @@ const projects = [
                 {project.liveUrl && (
                   <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                     <Button>
-                      <ExternalLink class="size-4" />
+                      <ExternalLinkIcon class="size-4" />
                       Demo
                     </Button>
                   </a>
@@ -130,7 +130,7 @@ const projects = [
                 {project.githubUrl && (
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Button variant="secondary">
-                      <Github class="size-4" />
+                      <GithubIcon class="size-4" />
                       Código
                     </Button>
                   </a>
