@@ -31,24 +31,6 @@ import '@fontsource-variable/onest'
       name="description"
       content="Portafolio de jaycodev, desarrollador Full Stack. Descubre proyectos, habilidades y contacto para colaboración y aprendizaje."
     />
-
-    <script is:inline>
-      const theme =
-        localStorage.getItem('theme') ||
-        (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-
-      document.documentElement.classList.add(theme)
-
-      const meta = document.querySelector('meta[name="theme-color"]')
-      if (meta) {
-        const themeColor = getComputedStyle(document.documentElement)
-          .getPropertyValue('--surface')
-          .trim()
-
-        meta.content = themeColor
-      }
-    </script>
-    <meta name="theme-color" content="#09080a" />
   </head>
   <body class="min-h-screen w-full bg-background">
     <Header />
