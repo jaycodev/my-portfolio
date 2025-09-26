@@ -5,6 +5,7 @@ import {
   Cloudinary,
   CSharp,
   DotNetCore,
+  ExternalLink,
   Github,
   Java,
   MySQL,
@@ -16,81 +17,77 @@ import {
   Tailwind,
   Thymeleaf,
   TypeScript,
-  ExternalLink,
-} from "@/components/icons";
-import { Badge, Button } from "@/components/ui";
+} from '@/components/icons'
+import { Badge, Button } from '@/components/ui'
 
 const projects = [
   {
-    title: "BookStudio",
+    title: 'BookStudio',
     description:
-      "Plataforma web para la gestión y préstamo de libros en bibliotecas, con panel administrativo.",
-    image: "/images/projects/bookstudio.webp",
+      'Plataforma web para la gestión y préstamo de libros en bibliotecas, con panel administrativo.',
+    image: '/images/projects/bookstudio.webp',
     technologies: [
-      { label: "TypeScript", icon: TypeScript },
-      { label: "Next.js", icon: NextJs },
-      { label: "React", icon: React },
-      { label: "Tailwind CSS", icon: Tailwind },
-      { label: "Shadcn UI", icon: Shadcn },
+      { label: 'TypeScript', icon: TypeScript },
+      { label: 'Next.js', icon: NextJs },
+      { label: 'React', icon: React },
+      { label: 'Tailwind CSS', icon: Tailwind },
+      { label: 'Shadcn UI', icon: Shadcn },
     ],
-    liveUrl: "https://bookstudio-dev.vercel.app",
-    githubUrl: "https://github.com/jaycodev/bookstudio",
+    liveUrl: 'https://bookstudio-dev.vercel.app',
+    githubUrl: 'https://github.com/jaycodev/bookstudio',
   },
   {
-    title: "MediDesk",
-    description:
-      "Aplicación web para la gestión de citas médicas, con programación en calendario.",
-    image: "/images/projects/medidesk.webp",
+    title: 'MediDesk',
+    description: 'Aplicación web para la gestión de citas médicas, con programación en calendario.',
+    image: '/images/projects/medidesk.webp',
     technologies: [
-      { label: "C#", icon: CSharp },
-      { label: ".NET Core", icon: DotNetCore },
-      { label: "Bootstrap", icon: Bootstrap },
-      { label: "Cloudinary", icon: Cloudinary },
-      { label: "SQL Server", icon: SQLServer },
+      { label: 'C#', icon: CSharp },
+      { label: '.NET Core', icon: DotNetCore },
+      { label: 'Bootstrap', icon: Bootstrap },
+      { label: 'Cloudinary', icon: Cloudinary },
+      { label: 'SQL Server', icon: SQLServer },
     ],
-    liveUrl: "https://medidesk.onrender.com",
-    githubUrl: "https://github.com/jaycodev/medidesk",
+    liveUrl: 'https://medidesk.onrender.com',
+    githubUrl: 'https://github.com/jaycodev/medidesk',
   },
   {
-    title: "CodeLoop",
+    title: 'CodeLoop',
     description:
-      "Plataforma online para cursos dirigida a estudiantes, que permite la administración de contenidos.",
-    image: "/images/projects/codeloop.webp",
+      'Plataforma online para cursos dirigida a estudiantes, que permite la administración de contenidos.',
+    image: '/images/projects/codeloop.webp',
     technologies: [
-      { label: "TypeScript", icon: TypeScript },
-      { label: "Angular", icon: Angular },
-      { label: "Tailwind CSS", icon: Tailwind },
-      { label: "Java", icon: Java },
-      { label: "Spring Boot", icon: SpringBoot },
-      { label: "MySQL", icon: MySQL },
+      { label: 'TypeScript', icon: TypeScript },
+      { label: 'Angular', icon: Angular },
+      { label: 'Tailwind CSS', icon: Tailwind },
+      { label: 'Java', icon: Java },
+      { label: 'Spring Boot', icon: SpringBoot },
+      { label: 'MySQL', icon: MySQL },
     ],
-    githubUrl: "https://github.com/jaycodev/codeloop",
+    githubUrl: 'https://github.com/jaycodev/codeloop',
   },
   {
-    title: "Mobilnet",
+    title: 'Mobilnet',
     description:
-      "Aplicación web para el registro RUC10 en redes GPON, que incorpora visualización de datos mediante gráficos.",
-    image: "/images/projects/mobilnet.webp",
+      'Aplicación web para el registro RUC10 en redes GPON, que incorpora visualización de datos mediante gráficos.',
+    image: '/images/projects/mobilnet.webp',
     technologies: [
-      { label: "Java", icon: Java },
-      { label: "Spring Boot", icon: SpringBoot },
-      { label: "Thymeleaf", icon: Thymeleaf },
-      { label: "Bootstrap", icon: Bootstrap },
-      { label: "MySQL", icon: MySQL },
+      { label: 'Java', icon: Java },
+      { label: 'Spring Boot', icon: SpringBoot },
+      { label: 'Thymeleaf', icon: Thymeleaf },
+      { label: 'Bootstrap', icon: Bootstrap },
+      { label: 'MySQL', icon: MySQL },
     ],
-    liveUrl: "https://mobilnet.onrender.com",
-    githubUrl: "https://github.com/jaycodev/mobilnet",
+    liveUrl: 'https://mobilnet.onrender.com',
+    githubUrl: 'https://github.com/jaycodev/mobilnet',
   },
-];
+]
 ---
 
 <section id="proyectos" class="relative py-25 px-6">
   <div class="max-w-screen-md mx-auto">
     <div class="text-center mb-12">
       <Badge class="mb-4">Proyectos</Badge>
-      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">
-        Mis trabajos
-      </h2>
+      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">Mis trabajos</h2>
       <p class="text-muted-foreground mt-2 sm:mt-4 text-lg">
         Mostrando algunos de mis mejores proyectos y logros técnicos.
       </p>
@@ -114,11 +111,7 @@ const projects = [
 
               <div class="flex flex-wrap gap-2 mb-6">
                 {project.technologies.map(({ label, icon: Icon }) => (
-                  <Badge
-                    key={label}
-                    variant="outline"
-                    class="flex items-center gap-1"
-                  >
+                  <Badge key={label} variant="outline" class="flex items-center gap-1">
                     {Icon && <Icon class="size-3" />}
                     {label}
                   </Badge>
@@ -127,11 +120,7 @@ const projects = [
 
               <div class="flex gap-3 mt-auto">
                 {project.liveUrl && (
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                     <Button>
                       <ExternalLink class="size-4" />
                       Demo
@@ -139,11 +128,7 @@ const projects = [
                   </a>
                 )}
                 {project.githubUrl && (
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Button variant="secondary">
                       <Github class="size-4" />
                       Código

@@ -1,33 +1,28 @@
 ---
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
 
 interface Props {
-  orientation?: "horizontal" | "vertical";
-  decorative?: boolean;
-  class?: string;
-  [key: string]: any;
+  orientation?: 'horizontal' | 'vertical'
+  decorative?: boolean
+  class?: string
+  [key: string]: any
 }
 
 const {
-  orientation = "horizontal",
+  orientation = 'horizontal',
   decorative = true,
-  class: className = "",
+  class: className = '',
   ...rest
-} = Astro.props as Props;
+} = Astro.props as Props
 
-const orientationClasses =
-  orientation === "horizontal" ? "h-px w-full" : "h-full w-px";
+const orientationClasses = orientation === 'horizontal' ? 'h-px w-full' : 'h-full w-px'
 ---
 
 <div
   data-slot="separator"
   data-orientation={orientation}
-  aria-hidden={decorative ? "true" : "false"}
-  class={cn(
-    "bg-gray-300 dark:bg-white/10 shrink-0",
-    orientationClasses,
-    className
-  )}
+  aria-hidden={decorative ? 'true' : 'false'}
+  class={cn('bg-gray-300 dark:bg-white/10 shrink-0', orientationClasses, className)}
   {...rest}
 >
 </div>

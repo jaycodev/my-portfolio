@@ -1,36 +1,32 @@
 ---
-import { ThemeToggle } from "@/components/ui";
+import { ThemeToggle } from '@/components/ui'
 
 const navItems = [
   {
-    title: "Inicio",
-    label: "inicio",
-    url: "/#inicio",
+    title: 'Inicio',
+    label: 'inicio',
+    url: '/#inicio',
   },
   {
-    title: "Proyectos",
-    label: "proyectos",
-    url: "/#proyectos",
+    title: 'Proyectos',
+    label: 'proyectos',
+    url: '/#proyectos',
   },
   {
-    title: "Sobre mí",
-    label: "sobre-mi",
-    url: "/#sobre-mi",
+    title: 'Sobre mí',
+    label: 'sobre-mi',
+    url: '/#sobre-mi',
   },
   {
-    title: "Contacto",
-    label: "contacto",
-    url: "mailto:jason.vilac@gmail.com",
+    title: 'Contacto',
+    label: 'contacto',
+    url: 'mailto:jason.vilac@gmail.com',
   },
-];
+]
 ---
 
-<header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
->
-  <nav
-    class="flex px-3 text-sm font-medium rounded-full justify-center items-center"
-  >
+<header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
+  <nav class="flex px-3 text-sm font-medium rounded-full justify-center items-center">
     {
       navItems.map((link) => (
         <a
@@ -48,44 +44,44 @@ const navItems = [
 </header>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const navItems = document.querySelectorAll(".nav-item");
+  document.addEventListener('DOMContentLoaded', () => {
+    const navItems = document.querySelectorAll('.nav-item')
 
     function updateActiveNav() {
-      const sections = document.querySelectorAll("section[id]");
-      const scrollPos = window.scrollY + 100;
+      const sections = document.querySelectorAll('section[id]')
+      const scrollPos = window.scrollY + 100
 
-      let currentSection = "inicio";
+      let currentSection = 'inicio'
 
       sections.forEach((section) => {
-        const sectionTop = (section as HTMLElement).offsetTop;
-        const sectionHeight = (section as HTMLElement).offsetHeight;
+        const sectionTop = (section as HTMLElement).offsetTop
+        const sectionHeight = (section as HTMLElement).offsetHeight
 
         if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-          currentSection = section.id;
+          currentSection = section.id
         }
-      });
+      })
 
       navItems.forEach((item) => {
-        const target = item.getAttribute("data-target");
+        const target = item.getAttribute('data-target')
         if (target === currentSection) {
-          item.classList.add("text-primary");
-          item.classList.remove("text-muted-foreground");
+          item.classList.add('text-primary')
+          item.classList.remove('text-muted-foreground')
         } else {
-          item.classList.remove("text-primary");
-          item.classList.add("text-muted-foreground");
+          item.classList.remove('text-primary')
+          item.classList.add('text-muted-foreground')
         }
-      });
+      })
     }
 
-    let scrollTimeout: NodeJS.Timeout;
-    window.addEventListener("scroll", () => {
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(updateActiveNav, 10);
-    });
+    let scrollTimeout: NodeJS.Timeout
+    window.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout)
+      scrollTimeout = setTimeout(updateActiveNav, 10)
+    })
 
-    updateActiveNav();
-  });
+    updateActiveNav()
+  })
 </script>
 
 <style>

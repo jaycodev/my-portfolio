@@ -1,5 +1,5 @@
-export { default as Badge } from "./Badge.astro";
-export { default as Button } from "./Button.astro";
-export { default as ProfileImage } from "./ProfileImage.astro";
-export { default as Separator } from "./Separator.astro";
-export { default as ThemeToggle } from "./ThemeToggle.astro";
+export { default as Badge } from './Badge.astro'
+export { default as Button } from './Button.astro'
+export { default as ProfileImage } from './ProfileImage.astro'
+export { default as Separator } from './Separator.astro'
+export { default as ThemeToggle } from './ThemeToggle.astro'

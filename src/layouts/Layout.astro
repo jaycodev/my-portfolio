@@ -1,8 +1,9 @@
 ---
-import "@fontsource-variable/onest";
-import "@/styles/globals.css";
+import { Footer, Header } from '@/components/layout'
 
-import { Header, Footer } from "@/components/layout";
+import '@/styles/globals.css'
+
+import '@fontsource-variable/onest'
 ---
 
 <!doctype html>
@@ -33,18 +34,18 @@ import { Header, Footer } from "@/components/layout";
 
     <script is:inline>
       const theme =
-        localStorage.getItem("theme") ||
-        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        localStorage.getItem('theme') ||
+        (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
 
-      document.documentElement.classList.add(theme);
+      document.documentElement.classList.add(theme)
 
-      const meta = document.querySelector('meta[name="theme-color"]');
+      const meta = document.querySelector('meta[name="theme-color"]')
       if (meta) {
         const themeColor = getComputedStyle(document.documentElement)
-          .getPropertyValue("--surface")
-          .trim();
+          .getPropertyValue('--surface')
+          .trim()
 
-        meta.content = themeColor;
+        meta.content = themeColor
       }
     </script>
     <meta name="theme-color" content="#09080a" />

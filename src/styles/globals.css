@@ -1,9 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-onest: "Onest Variable", sans-serif;
+  --font-onest: 'Onest Variable', sans-serif;
   --color-primary: var(--primary);
   --color-foreground: var(--foreground);
   --color-muted-foreground: var(--muted-foreground);
@@ -29,12 +29,8 @@
 }
 
 .bg-background {
-  background: radial-gradient(
-      ellipse 80% 80% at 50% -20%,
-      rgba(120, 119, 198, 0.3),
-      transparent
-    ),
-    white;
+  background:
+    radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), transparent), white;
 }
 
 .bg-background:is(.dark *) {

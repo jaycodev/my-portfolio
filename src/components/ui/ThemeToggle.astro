@@ -1,5 +1,5 @@
 ---
-import { Sun, Moon } from "@/components/icons";
+import { Moon, Sun } from '@/components/icons'
 ---
 
 <div class="relative ml-1 mr-1">
@@ -29,68 +29,59 @@ import { Sun, Moon } from "@/components/icons";
 </style>
 
 <script is:inline>
-  let remove = null;
-  const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
+  let remove = null
+  const matchMedia = window.matchMedia('(prefers-color-scheme: dark)')
 
   const getThemePreference = () => {
-    if (typeof localStorage !== "undefined") {
-      return localStorage.getItem("theme") ?? "system";
+    if (typeof localStorage !== 'undefined') {
+      return localStorage.getItem('theme') ?? 'system'
     }
 
-    return matchMedia.matches ? "dark" : "light";
-  };
+    return matchMedia.matches ? 'dark' : 'light'
+  }
 
   const updateIcon = (themePreference) => {
     const resolved =
-      themePreference === "system"
-        ? matchMedia.matches
-          ? "dark"
-          : "light"
-        : themePreference;
+      themePreference === 'system' ? (matchMedia.matches ? 'dark' : 'light') : themePreference
 
-    document.querySelectorAll(".theme-toggle-icon").forEach((element) => {
-      element.style.scale = element.id === resolved ? "1" : "0";
-    });
-  };
+    document.querySelectorAll('.theme-toggle-icon').forEach((element) => {
+      element.style.scale = element.id === resolved ? '1' : '0'
+    })
+  }
 
   const updateTheme = () => {
     if (remove != null) {
-      remove();
+      remove()
     }
-    matchMedia.addEventListener("change", updateTheme);
+    matchMedia.addEventListener('change', updateTheme)
     remove = () => {
-      matchMedia.removeEventListener("change", updateTheme);
-    };
+      matchMedia.removeEventListener('change', updateTheme)
+    }
 
-    const themePreference = getThemePreference();
+    const themePreference = getThemePreference()
     const isDark =
-      themePreference === "dark" ||
-      (themePreference === "system" && matchMedia.matches);
+      themePreference === 'dark' || (themePreference === 'system' && matchMedia.matches)
 
-    updateIcon(themePreference);
-    document.documentElement.classList[isDark ? "add" : "remove"]("dark");
-  };
+    updateIcon(themePreference)
+    document.documentElement.classList[isDark ? 'add' : 'remove']('dark')
+  }
 
-  updateTheme();
+  updateTheme()
 
-  document.getElementById("theme-toggle-btn").addEventListener("click", (e) => {
-    e.stopPropagation();
+  document.getElementById('theme-toggle-btn').addEventListener('click', (e) => {
+    e.stopPropagation()
 
-    const currentPref = getThemePreference();
+    const currentPref = getThemePreference()
     const currentResolved =
-      currentPref === "system"
-        ? matchMedia.matches
-          ? "dark"
-          : "light"
-        : currentPref;
-    const newPref = currentResolved === "dark" ? "light" : "dark";
+      currentPref === 'system' ? (matchMedia.matches ? 'dark' : 'light') : currentPref
+    const newPref = currentResolved === 'dark' ? 'light' : 'dark'
 
-    localStorage.setItem("theme", newPref);
-    updateTheme();
-  });
+    localStorage.setItem('theme', newPref)
+    updateTheme()
+  })
 
-  document.addEventListener("astro:after-swap", () => {
-    updateTheme();
-    window.scrollTo({ left: 0, top: 0, behavior: "instant" });
-  });
+  document.addEventListener('astro:after-swap', () => {
+    updateTheme()
+    window.scrollTo({ left: 0, top: 0, behavior: 'instant' })
+  })
 </script>
