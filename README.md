@@ -7,7 +7,7 @@
 
 <div align="center">
 
-![Astro](https://img.shields.io/badge/Astro-17101a?style=flat&logo=astro&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-38bcf9?logo=tailwindcss&logoColor=white&style=flat)
+![Astro](https://img.shields.io/badge/Astro-16191f?style=flat&logo=astro&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=white&style=flat)
 
 </div>
