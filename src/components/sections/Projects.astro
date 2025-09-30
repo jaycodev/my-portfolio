@@ -4,18 +4,21 @@ import {
   BootstrapIcon,
   CloudinaryIcon,
   CSharpIcon,
+  DockerIcon,
   DotNetCoreIcon,
   ExternalLinkIcon,
   GithubIcon,
   JavaIcon,
   MySQLIcon,
   NextJsIcon,
+  PostgreSQLIcon,
   PrimeNGIcon,
   ReactIcon,
   RxjsIcon,
   ShadcnIcon,
   SpringBootIcon,
   SQLServerIcon,
+  SwaggerIcon,
   TailwindIcon,
   ThymeleafIcon,
   TypeScriptIcon,
@@ -39,6 +42,21 @@ const projects = [
     githubUrl: 'https://github.com/jaycodev/bookstudio',
   },
   {
+    title: 'BookStudio API',
+    description:
+      'API REST para la plataforma web BookStudio, con arquitectura hexagonal y documentación.',
+    image: '/images/projects/bookstudio-api.webp',
+    technologies: [
+      { label: 'Java', icon: JavaIcon },
+      { label: 'Spring Boot', icon: SpringBootIcon },
+      { label: 'PostgreSQL', icon: PostgreSQLIcon },
+      { label: 'Docker', icon: DockerIcon },
+      { label: 'OpenAPI', icon: SwaggerIcon },
+    ],
+    liveUrl: 'https://api-bookstudio.onrender.com',
+    githubUrl: 'https://github.com/jaycodev/bookstudio-api',
+  },
+  {
     title: 'MediDesk',
     description:
       'Aplicación web para la gestión de citas médicas, con programación en calendario y recordatorios automáticos.',
@@ -52,6 +70,21 @@ const projects = [
     ],
     liveUrl: 'https://medidesk.onrender.com',
     githubUrl: 'https://github.com/jaycodev/medidesk',
+  },
+  {
+    title: 'Mobilnet',
+    description:
+      'Aplicación web para el registro RUC10 en redes GPON, que incorpora visualización de datos mediante gráficos.',
+    image: '/images/projects/mobilnet.webp',
+    technologies: [
+      { label: 'Java', icon: JavaIcon },
+      { label: 'Spring Boot', icon: SpringBootIcon },
+      { label: 'Thymeleaf', icon: ThymeleafIcon },
+      { label: 'Bootstrap', icon: BootstrapIcon },
+      { label: 'MySQL', icon: MySQLIcon },
+    ],
+    liveUrl: 'https://mobilnet.onrender.com',
+    githubUrl: 'https://github.com/jaycodev/mobilnet',
   },
   {
     title: 'CodeLoop',
@@ -69,19 +102,19 @@ const projects = [
     githubUrl: 'https://github.com/jaycodev/codeloop',
   },
   {
-    title: 'Mobilnet',
+    title: 'CodeLoop API',
     description:
-      'Aplicación web para el registro RUC10 en redes GPON, que incorpora visualización de datos mediante gráficos.',
-    image: '/images/projects/mobilnet.webp',
+      'API REST para la plataforma online CodeLoop, con arquitectura en capas y documentación.',
+    image: '/images/projects/codeloop-api.webp',
     technologies: [
       { label: 'Java', icon: JavaIcon },
       { label: 'Spring Boot', icon: SpringBootIcon },
-      { label: 'Thymeleaf', icon: ThymeleafIcon },
-      { label: 'Bootstrap', icon: BootstrapIcon },
       { label: 'MySQL', icon: MySQLIcon },
+      { label: 'Docker', icon: DockerIcon },
+      { label: 'OpenAPI', icon: SwaggerIcon },
     ],
-    liveUrl: 'https://mobilnet.onrender.com',
-    githubUrl: 'https://github.com/jaycodev/mobilnet',
+    liveUrl: 'https://api-codeloop.onrender.com',
+    githubUrl: 'https://github.com/jaycodev/codeloop-api',
   },
 ]
 ---
