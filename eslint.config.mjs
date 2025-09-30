@@ -34,7 +34,7 @@ export default defineConfig([
           groups: [
             ['^astro$', '^astro/'],
             ['^@?\\w'],
-            ['^@/'],
+            ['^@components', '^@layouts', '^@lib', '^@styles'],
             ['^\\.\\.(?!/?$)', '^\\./'],
             ['\\.css$', '\\.scss$', '\\.less$'],
           ],
@@ -73,7 +73,7 @@ export default defineConfig([
           groups: [
             ['^astro$', '^astro/'],
             ['^@?\\w'],
-            ['^@/'],
+            ['^@components', '^@layouts', '^@lib', '^@styles'],
             ['^\\.\\.(?!/?$)', '^\\./'],
             ['\\.css$', '\\.scss$', '\\.less$'],
           ],
