@@ -1,5 +1,4 @@
 ---
-import AngularIcon from '@/components/icons/AngularIcon.astro'
 import BootstrapIcon from '@/components/icons/BootstrapIcon.astro'
 import CloudinaryIcon from '@/components/icons/CloudinaryIcon.astro'
 import CSharpIcon from '@/components/icons/CSharpIcon.astro'
@@ -11,9 +10,7 @@ import JavaIcon from '@/components/icons/JavaIcon.astro'
 import MySQLIcon from '@/components/icons/MySQLIcon.astro'
 import NextJsIcon from '@/components/icons/NextJsIcon.astro'
 import PostgreSQLIcon from '@/components/icons/PostgreSQLIcon.astro'
-import PrimeNGIcon from '@/components/icons/PrimeNGIcon.astro'
 import ReactIcon from '@/components/icons/ReactIcon.astro'
-import RxjsIcon from '@/components/icons/RxjsIcon.astro'
 import ShadcnIcon from '@/components/icons/ShadcnIcon.astro'
 import SpringBootIcon from '@/components/icons/SpringBootIcon.astro'
 import SQLServerIcon from '@/components/icons/SQLServerIcon.astro'
@@ -56,6 +53,36 @@ const projects = [
     githubUrl: 'https://github.com/jaycodev/bookstudio-api',
   },
   {
+    title: 'Areska',
+    description:
+      'E-commerce para la venta de periféricos de gaming y tecnología, con interfaz de administración',
+    image: '/images/projects/areska.webp',
+    technologies: [
+      { label: 'TypeScript', icon: TypeScriptIcon },
+      { label: 'Next.js', icon: NextJsIcon },
+      { label: 'React', icon: ReactIcon },
+      { label: 'Tailwind CSS', icon: TailwindIcon },
+      { label: 'shadcn/ui', icon: ShadcnIcon },
+    ],
+    liveUrl: 'https://areska.vercel.app',
+    githubUrl: 'https://github.com/jaycodev/areska',
+  },
+  {
+    title: 'Areska API',
+    description:
+      'Backend del e-commerce Areska, desarrollado con arquitectura en capas y documentación.',
+    image: '/images/projects/areska-api.webp',
+    technologies: [
+      { label: 'Java', icon: JavaIcon },
+      { label: 'Spring Boot', icon: SpringBootIcon },
+      { label: 'PostgreSQL', icon: PostgreSQLIcon },
+      { label: 'Docker', icon: DockerIcon },
+      { label: 'OpenAPI', icon: SwaggerIcon },
+    ],
+    liveUrl: 'https://api-areska.onrender.com',
+    githubUrl: 'https://github.com/jaycodev/areska-api',
+  },
+  {
     title: 'MediDesk',
     description:
       'Aplicación web para la gestión de citas médicas, con programación en calendario y recordatorios automáticos.',
@@ -84,36 +111,6 @@ const projects = [
     ],
     liveUrl: 'https://mobilnet.onrender.com',
     githubUrl: 'https://github.com/jaycodev/mobilnet',
-  },
-  {
-    title: 'CodeLoop',
-    description:
-      'Plataforma online para cursos dirigida a estudiantes, que permite la administración de contenidos.',
-    image: '/images/projects/codeloop.webp',
-    technologies: [
-      { label: 'TypeScript', icon: TypeScriptIcon },
-      { label: 'Angular', icon: AngularIcon },
-      { label: 'RxJS', icon: RxjsIcon },
-      { label: 'Tailwind CSS', icon: TailwindIcon },
-      { label: 'PrimeNG', icon: PrimeNGIcon },
-    ],
-    liveUrl: 'https://codeloop-site.vercel.app',
-    githubUrl: 'https://github.com/jaycodev/codeloop',
-  },
-  {
-    title: 'CodeLoop API',
-    description:
-      'API REST para la plataforma online CodeLoop, con arquitectura en capas y documentación.',
-    image: '/images/projects/codeloop-api.webp',
-    technologies: [
-      { label: 'Java', icon: JavaIcon },
-      { label: 'Spring Boot', icon: SpringBootIcon },
-      { label: 'MySQL', icon: MySQLIcon },
-      { label: 'Docker', icon: DockerIcon },
-      { label: 'OpenAPI', icon: SwaggerIcon },
-    ],
-    liveUrl: 'https://api-codeloop.onrender.com',
-    githubUrl: 'https://github.com/jaycodev/codeloop-api',
   },
 ]
 ---
