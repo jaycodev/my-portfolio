@@ -1,19 +1,5 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Redirigiendo...</title>
-    <script is:inline>
-      const browserLang = navigator.language || navigator.userLanguage
-      const lang = browserLang.toLowerCase().startsWith('es') ? 'es' : 'en'
-      window.location.href = `/${lang}/`
-    </script>
-    <noscript>
-      <meta http-equiv="refresh" content="0;url=/es/" />
-    </noscript>
-  </head>
-  <body>
-    <p>Redirigiendo...</p>
-  </body>
-</html>
+---
+const browserLang = Astro.request.headers.get('accept-language') || 'es'
+const lang = browserLang.toLowerCase().startsWith('es') ? 'es' : 'en'
+return Astro.redirect(`/${lang}/`)
+---
