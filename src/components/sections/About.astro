@@ -4,27 +4,39 @@ import GithubIcon from '@/components/icons/GithubIcon.astro'
 import Badge from '@/components/ui/Badge.astro'
 import Button from '@/components/ui/Button.astro'
 import ProfileImage from '@/components/ui/ProfileImage.astro'
+import { type Language, sectionIds, useTranslations } from '@/lib/i18n'
+
+interface Props {
+  lang: Language
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
 ---
 
-<section id="sobre-mi" class="relative py-25 px-6">
+<section id={sectionIds[lang].about} class="relative py-25 px-6">
   <div class="max-w-screen-md mx-auto">
     <div class="flex flex-col md:flex-row-reverse md:items-center gap-12">
       <ProfileImage class="hidden md:block" />
 
       <div class="flex-1 md:text-left">
-        <Badge class="mb-4">Sobre mí</Badge>
+        <Badge class="mb-4" data-i18n="about.badge">{t('about.badge')}</Badge>
 
         <ProfileImage class="mt-3 mb-8 block md:hidden" />
 
-        <h2 class="text-4xl font-bold mb-4 tracking-tight">
-          Desarrollador <span class="whitespace-nowrap">Full Stack</span>
+        <h2 class="text-4xl font-bold mb-4 tracking-tight" data-i18n="about.title">
+          {t('about.title')}
         </h2>
 
         <p
           class="text-muted-foreground mb-6 text-justify [&>strong]:text-indigo-800 dark:[&>strong]:text-indigo-300"
+          data-i18n-group="about.description"
         >
-          Me llamo <strong>Jason Vila</strong> y actualmente estudio
-          <strong>Computación e Informática</strong> en
+          <span data-i18n="about.description.part1">{t('about.description.part1')}</span>
+          <strong data-i18n="about.description.strong1">{t('about.description.strong1')}</strong>
+          <span data-i18n="about.description.part2">{t('about.description.part2')}</span>
+          <strong data-i18n="about.description.strong2">{t('about.description.strong2')}</strong>
+          <span data-i18n="about.description.part3">{t('about.description.part3')}</span>
           <a
             href="https://www.cibertec.edu.pe"
             target="_blank"
@@ -32,29 +44,37 @@ import ProfileImage from '@/components/ui/ProfileImage.astro'
             class="hover:underline"
           >
             CIBERTEC</a
-          >. Me apasiona la <strong>programación</strong> y la creación de aplicaciones bien estructuradas,
-          enfocándome en proyectos <strong>escalables</strong> con tecnologías modernas y manteniendo
-          un <strong>código limpio</strong> y buenas prácticas.
+          >.
+          <span data-i18n="about.description.part4">{t('about.description.part4')}</span>
+          <strong data-i18n="about.description.strong3">{t('about.description.strong3')}</strong>
+          <span data-i18n="about.description.part5">{t('about.description.part5')}</span>
+          <strong data-i18n="about.description.strong4">{t('about.description.strong4')}</strong>
+          <span data-i18n="about.description.part6">{t('about.description.part6')}</span>
+          <strong data-i18n="about.description.strong5">{t('about.description.strong5')}</strong>
+          <span data-i18n="about.description.part7">{t('about.description.part7')}</span>.
 
           <br /><br />
 
-          Me motiva seguir <strong>aprendiendo</strong>,
-          <strong>compartir conocimientos</strong> y construir
-          <strong> soluciones reales</strong> que dejen un impacto positivo en los proyectos y en la
-          <strong>comunidad de desarrolladores</strong>.
+          <span data-i18n="about.description.part8">{t('about.description.part8')}</span>
+          <strong data-i18n="about.description.strong6">{t('about.description.strong6')}</strong>,
+          <strong data-i18n="about.description.strong7">{t('about.description.strong7')}</strong>
+          <span data-i18n="about.description.part9">{t('about.description.part9')}</span>
+          <strong data-i18n="about.description.strong8">{t('about.description.strong8')}</strong>
+          <span data-i18n="about.description.part10">{t('about.description.part10')}</span>
+          <strong data-i18n="about.description.strong9">{t('about.description.strong9')}</strong>.
         </p>
 
         <div class="flex flex-wrap gap-4 justify-start">
           <a href="https://github.com/jaycodev" target="_blank" rel="noopener noreferrer">
             <Button>
               <GithubIcon class="size-4" />
-              Ver Github
+              <span data-i18n="about.cta.github">{t('about.cta.github')}</span>
             </Button>
           </a>
           <a href="/cv/cv-jason-vila.pdf" target="_blank" rel="noopener noreferrer">
             <Button variant="secondary">
               <FileTextIcon class="size-4" />
-              Ver CV
+              <span data-i18n="about.cta.cv">{t('about.cta.cv')}</span>
             </Button>
           </a>
         </div>

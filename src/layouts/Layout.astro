@@ -1,14 +1,21 @@
 ---
 import Footer from '@/components/layout/Footer.astro'
 import Header from '@/components/layout/Header.astro'
+import { type Language, ui } from '@/lib/i18n'
 
 import '@/globals.css'
 
 import '@fontsource-variable/onest'
+
+interface Props {
+  lang: Language
+}
+
+const { lang } = Astro.props
 ---
 
 <!doctype html>
-<html lang="es" class="dark">
+<html lang={lang} class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -26,17 +33,42 @@ import '@fontsource-variable/onest'
       media="(prefers-color-scheme: dark)"
     />
 
-    <title>Portafolio de Jason Vila - Desarrollador Full Stack</title>
-    <meta
-      name="description"
-      content="Portafolio de Jason Vila, desarrollador Full Stack. Descubre proyectos, habilidades y contacto para colaboración y aprendizaje."
-    />
+    <title id="page-title">{ui[lang]['meta.title']}</title>
+    <meta id="page-description" name="description" content={ui[lang]['meta.description']} />
   </head>
   <body class="min-h-screen w-full bg-background">
-    <Header />
+    <Header lang={lang} />
     <main class="space-y-10 sm:space-y-16">
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>
+
+<script>
+  import { ui, type Language } from '@/lib/i18n'
+
+  function updateAllTranslations(lang: Language) {
+    const titleElement = document.getElementById('page-title')
+    const descriptionElement = document.getElementById('page-description')
+
+    if (titleElement) {
+      titleElement.textContent = ui[lang]['meta.title']
+    }
+    if (descriptionElement) {
+      descriptionElement.setAttribute('content', ui[lang]['meta.description'])
+    }
+
+    const elements = document.querySelectorAll('[data-i18n]')
+    elements.forEach((el) => {
+      const key = el.getAttribute('data-i18n')
+      if (key && key in ui[lang]) {
+        el.textContent = ui[lang][key as keyof (typeof ui)[typeof lang]]
+      }
+    })
+  }
+
+  document.addEventListener('languagechange', ((e: CustomEvent<{ language: Language }>) => {
+    updateAllTranslations(e.detail.language)
+  }) as EventListener)
+</script>

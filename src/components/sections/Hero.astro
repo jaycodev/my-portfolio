@@ -3,12 +3,17 @@ import CircleArrowDownIcon from '@/components/icons/CircleArrowDownIcon.astro'
 import LinkedInIcon from '@/components/icons/LinkedInIcon.astro'
 import MailIcon from '@/components/icons/MailIcon.astro'
 import Button from '@/components/ui/Button.astro'
+import { type Language, sectionIds, useTranslations } from '@/lib/i18n'
+
+interface Props {
+  lang: Language
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
 ---
 
-<section
-  id="inicio"
-  class="relative min-h-screen flex items-center justify-center px-6 pt-6 overflow-hidden"
->
+<section class="relative min-h-screen flex items-center justify-center px-6 pt-6 overflow-hidden">
   <div class="relative z-[1] text-center max-w-screen-md">
     <div class="flex justify-center">
       <div class="flex items-center">
@@ -18,8 +23,9 @@ import Button from '@/components/ui/Button.astro'
           ></span>
           <div
             class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-indigo-800 bg-indigo-100 rounded-full dark:bg-gray-900 dark:text-gray-300 backdrop-blur-3xl whitespace-nowrap"
+            data-i18n="hero.badge"
           >
-            Desarrollador Full Stack
+            {t('hero.badge')}
           </div>
         </span>
       </div>
@@ -27,36 +33,43 @@ import Button from '@/components/ui/Button.astro'
 
     <h1
       class="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight text-gray-800 dark:text-white"
+      data-i18n="hero.title"
     >
-      Hey, soy Jason
+      {t('hero.title')}
     </h1>
 
     <p
       class="mt-6 text-[17px] md:text-lg text-muted-foreground [&>strong]:text-indigo-800 dark:[&>strong]:text-indigo-300"
+      data-i18n-group="hero.description"
     >
-      Creo soluciones <strong>robustas y escalables</strong>, enfocadas en la eficiencia, la calidad
-      y la experiencia del usuario, siempre buscando <strong>innovar y aprender</strong>.
+      <span data-i18n="hero.description.part1">{t('hero.description.part1')}</span>
+      <strong data-i18n="hero.description.strong1">{t('hero.description.strong1')}</strong><span
+        data-i18n="hero.description.part2">{t('hero.description.part2')}</span
+      >
+      <strong data-i18n="hero.description.strong2">{t('hero.description.strong2')}</strong>.
     </p>
 
     <div class="mt-12 flex flex-col items-center gap-4">
       <div class="flex gap-4">
         <a href="mailto:jason.vilac@gmail.com" target="_blank" rel="noopener noreferrer">
           <Button variant="secondary">
-            <MailIcon class="size-4" /> Contáctame
+            <MailIcon class="size-4" />
+            <span data-i18n="hero.cta.contact">{t('hero.cta.contact')}</span>
           </Button>
         </a>
 
         <a href="https://www.linkedin.com/in/jason-vila" target="_blank" rel="noopener noreferrer">
-          <Button variant="secondary" disabled>
-            <LinkedInIcon class="size-4" /> LinkedIn
+          <Button variant="secondary">
+            <LinkedInIcon class="size-4" />
+            <span data-i18n="hero.cta.linkedin">{t('hero.cta.linkedin')}</span>
           </Button>
         </a>
       </div>
 
-      <a href="#proyectos" aria-label="Ir a proyectos">
+      <a href={`#${sectionIds[lang].projects}`} aria-label={t('a11y.goToProjects')}>
         <Button>
           <CircleArrowDownIcon class="size-4" />
-          Descubre mi trabajo
+          <span data-i18n="hero.cta.discover">{t('hero.cta.discover')}</span>
         </Button>
       </a>
     </div>

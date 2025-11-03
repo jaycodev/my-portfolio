@@ -1,0 +1,50 @@
+---
+import FlagEnIcon from '@/components/icons/FlagEnIcon.astro'
+import FlagEsIcon from '@/components/icons/FlagEsIcon.astro'
+import type { Language } from '@/lib/i18n'
+
+interface Props {
+  currentLang: Language
+}
+
+const { currentLang } = Astro.props
+---
+
+<div class="relative ml-1 mr-1">
+  <a
+    href={currentLang === 'es' ? '/en/' : '/es/'}
+    transition:persist
+    id="language-toggle-btn"
+    class="appearance-none border-none flex hover:scale-125 transition cursor-pointer"
+  >
+    <span class="sr-only">Elige el idioma</span>
+    <FlagEsIcon
+      id="es-flag"
+      class:list={[
+        'language-toggle-icon size-4 transition-all',
+        currentLang === 'es' ? 'scale-100' : 'scale-0 absolute',
+      ]}
+    />
+    <FlagEnIcon
+      id="en-flag"
+      class:list={[
+        'language-toggle-icon size-4 transition-all',
+        currentLang === 'en' ? 'scale-100' : 'scale-0 absolute',
+      ]}
+    />
+  </a>
+</div>
+
+<style>
+  @keyframes scale-up-center {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+</style>

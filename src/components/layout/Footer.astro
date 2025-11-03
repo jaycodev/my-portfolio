@@ -3,19 +3,30 @@ import CodeXmlIcon from '@/components/icons/CodeXmlIcon.astro'
 import GithubIcon from '@/components/icons/GithubIcon.astro'
 import LinkedInIcon from '@/components/icons/LinkedInIcon.astro'
 import Separator from '@/components/ui/Separator.astro'
+import { type Language, sectionIds, useTranslations } from '@/lib/i18n'
+
+interface Props {
+  lang: Language
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
 
 const footerLinks = [
   {
-    title: 'Inicio',
-    href: '#inicio',
+    title: t('footer.experience'),
+    href: `/${lang}/#${sectionIds[lang].experience}`,
+    key: 'footer.experience',
   },
   {
-    title: 'Proyectos',
-    href: '#proyectos',
+    title: t('footer.projects'),
+    href: `/${lang}/#${sectionIds[lang].projects}`,
+    key: 'footer.projects',
   },
   {
-    title: 'Sobre mí',
-    href: '#sobre-mi',
+    title: t('footer.about'),
+    href: `/${lang}/#${sectionIds[lang].about}`,
+    key: 'footer.about',
   },
 ]
 ---
@@ -30,11 +41,12 @@ const footerLinks = [
 
       <ul class="mt-6 flex items-center gap-4 flex-wrap">
         {
-          footerLinks.map(({ title, href }) => (
+          footerLinks.map(({ title, href, key }) => (
             <li>
               <a
                 href={href}
                 class="text-muted-foreground transition-colors duration-200 ease-in-out hover:text-primary"
+                data-i18n={key}
               >
                 {title}
               </a>
@@ -47,8 +59,9 @@ const footerLinks = [
             class="text-muted-foreground transition-colors duration-200 ease-in-out hover:text-primary"
             target="_blank"
             rel="noopener noreferrer"
+            data-i18n="footer.contact"
           >
-            Contacto
+            {t('footer.contact')}
           </a>
         </li>
       </ul>

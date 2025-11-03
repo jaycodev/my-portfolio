@@ -20,12 +20,20 @@ import ThymeleafIcon from '@/components/icons/ThymeleafIcon.astro'
 import TypeScriptIcon from '@/components/icons/TypeScriptIcon.astro'
 import Badge from '@/components/ui/Badge.astro'
 import Button from '@/components/ui/Button.astro'
+import { type Language, sectionIds, useTranslations } from '@/lib/i18n'
+
+interface Props {
+  lang: Language
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
 
 const projects = [
   {
-    title: 'BookStudio',
-    description:
-      'Plataforma web para la gestión y préstamo de libros en bibliotecas, con panel administrativo.',
+    key: 'bookstudio',
+    title: t('projects.bookstudio.title'),
+    description: t('projects.bookstudio.description'),
     image: '/images/projects/bookstudio.webp',
     technologies: [
       { label: 'TypeScript', icon: TypeScriptIcon },
@@ -38,9 +46,9 @@ const projects = [
     githubUrl: 'https://github.com/jaycodev/bookstudio',
   },
   {
-    title: 'BookStudio API',
-    description:
-      'API REST para la plataforma web BookStudio, con arquitectura hexagonal y documentación.',
+    key: 'bookstudio-api',
+    title: t('projects.bookstudio-api.title'),
+    description: t('projects.bookstudio-api.description'),
     image: '/images/projects/bookstudio-api.webp',
     technologies: [
       { label: 'Java', icon: JavaIcon },
@@ -53,9 +61,9 @@ const projects = [
     githubUrl: 'https://github.com/jaycodev/bookstudio-api',
   },
   {
-    title: 'Areska',
-    description:
-      'E-commerce para la venta de periféricos de gaming y tecnología, con interfaz de administración',
+    key: 'areska',
+    title: t('projects.areska.title'),
+    description: t('projects.areska.description'),
     image: '/images/projects/areska.webp',
     technologies: [
       { label: 'TypeScript', icon: TypeScriptIcon },
@@ -68,9 +76,9 @@ const projects = [
     githubUrl: 'https://github.com/jaycodev/areska',
   },
   {
-    title: 'Areska API',
-    description:
-      'Backend del e-commerce Areska, desarrollado con arquitectura en capas y documentación.',
+    key: 'areska-api',
+    title: t('projects.areska-api.title'),
+    description: t('projects.areska-api.description'),
     image: '/images/projects/areska-api.webp',
     technologies: [
       { label: 'Java', icon: JavaIcon },
@@ -83,9 +91,9 @@ const projects = [
     githubUrl: 'https://github.com/jaycodev/areska-api',
   },
   {
-    title: 'MediDesk',
-    description:
-      'Aplicación web para la gestión de citas médicas, con programación en calendario y recordatorios automáticos.',
+    key: 'medidesk',
+    title: t('projects.medidesk.title'),
+    description: t('projects.medidesk.description'),
     image: '/images/projects/medidesk.webp',
     technologies: [
       { label: 'C#', icon: CSharpIcon },
@@ -98,9 +106,9 @@ const projects = [
     githubUrl: 'https://github.com/jaycodev/medidesk',
   },
   {
-    title: 'Mobilnet',
-    description:
-      'Aplicación web para el registro RUC10 en redes GPON, que incorpora visualización de datos mediante gráficos.',
+    key: 'mobilnet',
+    title: t('projects.mobilnet.title'),
+    description: t('projects.mobilnet.description'),
     image: '/images/projects/mobilnet.webp',
     technologies: [
       { label: 'Java', icon: JavaIcon },
@@ -115,13 +123,15 @@ const projects = [
 ]
 ---
 
-<section id="proyectos" class="relative py-25 px-6">
+<section id={sectionIds[lang].projects} class="relative py-25 px-6">
   <div class="max-w-screen-md mx-auto">
     <div class="text-center mb-12">
-      <Badge class="mb-4">Proyectos</Badge>
-      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">Mis trabajos</h2>
-      <p class="text-muted-foreground mt-2 sm:mt-4 text-lg">
-        Mostrando algunos de mis mejores proyectos y logros técnicos.
+      <Badge class="mb-4" data-i18n="projects.badge">{t('projects.badge')}</Badge>
+      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight" data-i18n="projects.title">
+        {t('projects.title')}
+      </h2>
+      <p class="text-muted-foreground mt-2 sm:mt-4 text-lg" data-i18n="projects.subtitle">
+        {t('projects.subtitle')}
       </p>
     </div>
 
@@ -138,8 +148,15 @@ const projects = [
             </div>
 
             <div class="flex-1 flex flex-col p-6">
-              <h3 class="text-xl font-semibold mb-2">{project.title}</h3>
-              <p class="text-muted-foreground mb-4">{project.description}</p>
+              <h3 class="text-xl font-semibold mb-2" data-i18n={`projects.${project.key}.title`}>
+                {project.title}
+              </h3>
+              <p
+                class="text-muted-foreground mb-4"
+                data-i18n={`projects.${project.key}.description`}
+              >
+                {project.description}
+              </p>
 
               <div class="flex flex-wrap gap-2 mb-6">
                 {project.technologies.map(({ label, icon: Icon }) => (
@@ -155,7 +172,7 @@ const projects = [
                   <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                     <Button>
                       <ExternalLinkIcon class="size-4" />
-                      Demo
+                      <span data-i18n="projects.cta.demo">{t('projects.cta.demo')}</span>
                     </Button>
                   </a>
                 )}
@@ -163,7 +180,7 @@ const projects = [
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Button variant="secondary">
                       <GithubIcon class="size-4" />
-                      Código
+                      <span data-i18n="projects.cta.code">{t('projects.cta.code')}</span>
                     </Button>
                   </a>
                 )}
