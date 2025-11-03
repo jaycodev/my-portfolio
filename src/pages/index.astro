@@ -1,5 +1,3 @@
 ---
-const browserLang = Astro.request.headers.get('accept-language') || 'es'
-const lang = browserLang.toLowerCase().startsWith('es') ? 'es' : 'en'
-return Astro.redirect(`/${lang}/`)
+
 ---
