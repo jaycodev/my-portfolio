@@ -146,7 +146,7 @@ export const ui = {
     'experience.title': 'Work history',
     'experience.subtitle': 'A timeline of my professional growth and key achievements.',
     'experience.job.title': 'Fullstack Web Developer Freelance',
-    'experience.job.company': 'Marketing VIP',
+    'experience.job.company': 'Marketing VIP CO',
     'experience.job.period': 'October 2025 - Present',
     'experience.job.description':
       'Development of complete web projects for agency clients, including fast and optimized landing pages. Refactoring and performance improvement on existing projects.',
