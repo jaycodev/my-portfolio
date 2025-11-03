@@ -43,7 +43,7 @@ export const ui = {
     'experience.badge': 'Experiencia',
     'experience.title': 'Trayectoria laboral',
     'experience.subtitle': 'Una línea de tiempo de mi crecimiento profesional y logros clave.',
-    'experience.job.title': 'Desarrollador Web Fullstack Freelance',
+    'experience.job.title': 'Desarrollador Web Full Stack Freelance',
     'experience.job.company': 'Marketing VIP CO',
     'experience.job.period': 'Octubre 2025 - Presente',
     'experience.job.description':
@@ -145,7 +145,7 @@ export const ui = {
     'experience.badge': 'Experience',
     'experience.title': 'Work history',
     'experience.subtitle': 'A timeline of my professional growth and key achievements.',
-    'experience.job.title': 'Fullstack Web Developer Freelance',
+    'experience.job.title': 'Full Stack Web Developer Freelance',
     'experience.job.company': 'Marketing VIP CO',
     'experience.job.period': 'October 2025 - Present',
     'experience.job.description':
