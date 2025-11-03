@@ -44,7 +44,7 @@ export const ui = {
     'experience.title': 'Trayectoria laboral',
     'experience.subtitle': 'Una línea de tiempo de mi crecimiento profesional y logros clave.',
     'experience.job.title': 'Desarrollador Web Fullstack Freelance',
-    'experience.job.company': 'Marketing VIP',
+    'experience.job.company': 'Marketing VIP CO',
     'experience.job.period': 'Octubre 2025 - Presente',
     'experience.job.description':
       'Desarrollo de proyectos web completos para clientes de la agencia, incluyendo landing pages rápidas y optimizadas. Refactorización y mejora de rendimiento en proyectos existentes.',
