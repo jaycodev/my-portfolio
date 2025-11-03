@@ -35,11 +35,13 @@
   "files.exclude": {
     "**/dist": true,
     "**/.astro": true,
-    "**/node_modules": true
+    "**/node_modules": true,
+    "**/.vercel": true
   },
   "search.exclude": {
     "**/dist": true,
     "**/.astro": true,
-    "**/node_modules": true
+    "**/node_modules": true,
+    "**/.vercel": true
   }
 }
