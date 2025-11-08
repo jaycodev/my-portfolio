@@ -21,30 +21,47 @@ const { currentLang } = Astro.props
     <FlagEsIcon
       id="es-flag"
       class:list={[
-        'language-toggle-icon size-4 transition-all',
-        currentLang === 'es' ? 'scale-100' : 'scale-0 absolute',
+        'language-toggle-icon size-4',
+        currentLang === 'es' ? 'opacity-100' : 'opacity-0 absolute pointer-events-none',
       ]}
     />
     <FlagEnIcon
       id="en-flag"
       class:list={[
-        'language-toggle-icon size-4 transition-all',
-        currentLang === 'en' ? 'scale-100' : 'scale-0 absolute',
+        'language-toggle-icon size-4',
+        currentLang === 'en' ? 'opacity-100' : 'opacity-0 absolute pointer-events-none',
       ]}
     />
   </a>
 </div>
 
-<style>
-  @keyframes scale-up-center {
-    from {
-      transform: scale(0.8);
-      opacity: 0;
-    }
+<script>
+  function updateLanguageToggle() {
+    const currentPath = window.location.pathname
+    const lang = currentPath.startsWith('/es') ? 'es' : 'en'
 
-    to {
-      transform: scale(1);
-      opacity: 1;
+    const button = document.getElementById('language-toggle-btn') as HTMLAnchorElement
+    const esFlag = document.getElementById('es-flag')
+    const enFlag = document.getElementById('en-flag')
+
+    if (!button || !esFlag || !enFlag) return
+
+    button.href = lang === 'es' ? '/en/' : '/es/'
+
+    if (lang === 'es') {
+      esFlag.classList.add('opacity-100')
+      esFlag.classList.remove('opacity-0', 'absolute', 'pointer-events-none')
+      enFlag.classList.remove('opacity-100')
+      enFlag.classList.add('opacity-0', 'absolute', 'pointer-events-none')
+    } else {
+      enFlag.classList.add('opacity-100')
+      enFlag.classList.remove('opacity-0', 'absolute', 'pointer-events-none')
+      esFlag.classList.remove('opacity-100')
+      esFlag.classList.add('opacity-0', 'absolute', 'pointer-events-none')
     }
   }
-</style>
+
+  document.addEventListener('DOMContentLoaded', updateLanguageToggle)
+
+  document.addEventListener('astro:after-swap', updateLanguageToggle)
+</script>
