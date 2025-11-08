@@ -1,4 +1,6 @@
 ---
+import { ClientRouter } from 'astro:transitions'
+
 import Footer from '@/components/layout/Footer.astro'
 import Header from '@/components/layout/Header.astro'
 import { type Language, ui } from '@/lib/i18n'
@@ -35,6 +37,8 @@ const { lang } = Astro.props
 
     <title id="page-title">{ui[lang]['meta.title']}</title>
     <meta id="page-description" name="description" content={ui[lang]['meta.description']} />
+
+    <ClientRouter />
   </head>
   <body class="min-h-screen w-full bg-background">
     <Header lang={lang} />
