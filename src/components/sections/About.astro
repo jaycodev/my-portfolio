@@ -4,9 +4,9 @@ import GithubIcon from '@/components/icons/GithubIcon.astro'
 import Badge from '@/components/ui/Badge.astro'
 import Button from '@/components/ui/Button.astro'
 import ProfileImage from '@/components/ui/ProfileImage.astro'
-import { defaultLang, type Language, sectionIds, useTranslations } from '@/i18n'
+import { sectionIds, useTranslations } from '@/i18n'
 
-const lang = (Astro.currentLocale as Language) || defaultLang
+const lang = Astro.locals.lang
 const t = useTranslations(lang)
 ---
 

@@ -7,9 +7,9 @@ import NextJsIcon from '@/components/icons/NextJsIcon.astro'
 import ReactIcon from '@/components/icons/ReactIcon.astro'
 import TailwindIcon from '@/components/icons/TailwindIcon.astro'
 import Badge from '@/components/ui/Badge.astro'
-import { defaultLang, type Language, sectionIds, useTranslations } from '@/i18n'
+import { sectionIds, useTranslations } from '@/i18n'
 
-const lang = (Astro.currentLocale as Language) || defaultLang
+const lang = Astro.locals.lang
 const t = useTranslations(lang)
 
 const experiences = [
