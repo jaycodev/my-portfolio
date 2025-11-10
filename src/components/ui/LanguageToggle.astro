@@ -12,7 +12,7 @@ const { currentLang } = Astro.props
 
 <div class="relative ml-1 mr-1">
   <a
-    href={currentLang === 'es' ? '/en/' : '/'}
+    href={currentLang === 'es' ? '/en' : '/'}
     transition:persist
     id="language-toggle-btn"
     class="appearance-none border-none flex hover:scale-125 transition cursor-pointer"
@@ -46,7 +46,7 @@ const { currentLang } = Astro.props
 
     if (!button || !esFlag || !enFlag) return
 
-    button.href = lang === 'es' ? '/en/' : '/'
+    button.href = lang === 'es' ? '/en' : '/'
 
     if (lang === 'es') {
       esFlag.classList.add('opacity-100')
