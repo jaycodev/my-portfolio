@@ -8,20 +8,25 @@ import { sectionIds, useTranslations } from '@/i18n'
 const lang = Astro.locals.lang
 const t = useTranslations(lang)
 
+const urlPrefix = lang === 'en' ? '/en' : ''
+
 const footerLinks = [
   {
     title: t('footer.experience'),
-    href: `/${lang}/#${sectionIds[lang].experience}`,
+    label: sectionIds[lang].experience,
+    url: `${urlPrefix}/#${sectionIds[lang].experience}`,
     key: 'footer.experience',
   },
   {
     title: t('footer.projects'),
-    href: `/${lang}/#${sectionIds[lang].projects}`,
+    label: sectionIds[lang].projects,
+    url: `${urlPrefix}/#${sectionIds[lang].projects}`,
     key: 'footer.projects',
   },
   {
     title: t('footer.about'),
-    href: `/${lang}/#${sectionIds[lang].about}`,
+    label: sectionIds[lang].about,
+    url: `${urlPrefix}/#${sectionIds[lang].about}`,
     key: 'footer.about',
   },
 ]
@@ -37,10 +42,10 @@ const footerLinks = [
 
       <ul class="mt-6 flex items-center gap-4 flex-wrap">
         {
-          footerLinks.map(({ title, href, key }) => (
+          footerLinks.map(({ title, url, key }) => (
             <li>
               <a
-                href={href}
+                href={url}
                 class="text-muted-foreground transition-colors duration-200 ease-in-out hover:text-primary"
                 data-i18n={key}
               >
