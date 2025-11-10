@@ -7,6 +7,7 @@ import { sectionIds, useTranslations } from '@/i18n'
 
 const lang = Astro.locals.lang
 const t = useTranslations(lang)
+const urlPrefix = lang === 'en' ? '/en' : ''
 ---
 
 <section class="relative min-h-screen flex items-center justify-center px-6 pt-6 overflow-hidden">
@@ -62,7 +63,7 @@ const t = useTranslations(lang)
         </a>
       </div>
 
-      <a href={`#${sectionIds[lang].projects}`} aria-label={t('a11y.goToProjects')}>
+      <a href={`${urlPrefix}/#${sectionIds[lang].projects}`} aria-label={t('a11y.goToProjects')}>
         <Button>
           <CircleArrowDownIcon class="size-4" />
           <span data-i18n="hero.cta.discover">{t('hero.cta.discover')}</span>
