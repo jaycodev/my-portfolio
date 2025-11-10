@@ -35,6 +35,10 @@ const { lang } = Astro.props
       media="(prefers-color-scheme: dark)"
     />
 
+    <link rel="alternate" hreflang="es" href="https://jaycodev.vercel.app/" />
+    <link rel="alternate" hreflang="en" href="https://jaycodev.vercel.app/en" />
+    <link rel="alternate" hreflang="x-default" href="https://jaycodev.vercel.app/" />
+
     <title id="page-title">{ui[lang]['meta.title']}</title>
     <meta id="page-description" name="description" content={ui[lang]['meta.description']} />
 
