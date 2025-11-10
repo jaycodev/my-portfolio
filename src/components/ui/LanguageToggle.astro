@@ -1,6 +1,6 @@
 ---
-import FlagEnIcon from '@/components/icons/FlagEnIcon.astro'
-import FlagEsIcon from '@/components/icons/FlagEsIcon.astro'
+import Spain from '@/components/flags/Spain.astro'
+import UnitedStates from '@/components/flags/UnitedStates.astro'
 import type { Language } from '@/i18n'
 
 interface Props {
@@ -18,14 +18,14 @@ const { currentLang } = Astro.props
     class="appearance-none border-none flex hover:scale-125 transition cursor-pointer"
   >
     <span class="sr-only">Elige el idioma</span>
-    <FlagEsIcon
+    <Spain
       id="es-flag"
       class:list={[
         'language-toggle-icon size-4',
         currentLang === 'es' ? 'opacity-100' : 'opacity-0 absolute pointer-events-none',
       ]}
     />
-    <FlagEnIcon
+    <UnitedStates
       id="en-flag"
       class:list={[
         'language-toggle-icon size-4',
