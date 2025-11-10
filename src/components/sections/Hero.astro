@@ -3,11 +3,11 @@ import CircleArrowDownIcon from '@/components/icons/CircleArrowDownIcon.astro'
 import LinkedInIcon from '@/components/icons/LinkedInIcon.astro'
 import MailIcon from '@/components/icons/MailIcon.astro'
 import Button from '@/components/ui/Button.astro'
-import { sectionIds, useTranslations } from '@/i18n'
+import { getUrlPrefix, sectionIds, useTranslations } from '@/i18n'
 
 const lang = Astro.locals.lang
 const t = useTranslations(lang)
-const urlPrefix = lang === 'en' ? '/en' : ''
+const urlPrefix = getUrlPrefix(lang)
 ---
 
 <section class="relative min-h-screen flex items-center justify-center px-6 pt-6 overflow-hidden">

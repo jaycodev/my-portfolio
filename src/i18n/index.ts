@@ -60,3 +60,7 @@ export function useTranslations(lang: Language = defaultLang) {
     return ui[lang][key] || ui[defaultLang][key]
   }
 }
+
+export function getUrlPrefix(lang: Language): string {
+  return lang === 'en' ? '/en' : ''
+}

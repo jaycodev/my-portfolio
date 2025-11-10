@@ -1,11 +1,11 @@
 ---
 import LanguageToggle from '@/components/ui/LanguageToggle.astro'
 import ThemeToggle from '@/components/ui/ThemeToggle.astro'
-import { sectionIds, useTranslations } from '@/i18n'
+import { getUrlPrefix, sectionIds, useTranslations } from '@/i18n'
 
 const lang = Astro.locals.lang
 const t = useTranslations(lang)
-const urlPrefix = lang === 'en' ? '/en' : ''
+const urlPrefix = getUrlPrefix(lang)
 
 const navItems = [
   {
