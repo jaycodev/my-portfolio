@@ -1,8 +1,6 @@
 ---
 import { ClientRouter } from 'astro:transitions'
 
-import Footer from '@/components/layout/Footer.astro'
-import Header from '@/components/layout/Header.astro'
 import { type Language, ui } from '@/i18n'
 
 import '@/globals.css'
@@ -49,11 +47,7 @@ if (typeof Astro.locals === 'object') {
     <ClientRouter />
   </head>
   <body class="min-h-screen w-full bg-background">
-    <Header />
-    <main class="space-y-10 sm:space-y-16">
-      <slot />
-    </main>
-    <Footer />
+    <slot />
   </body>
 </html>
 

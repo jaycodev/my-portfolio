@@ -1,4 +1,6 @@
 ---
+import Footer from '@/components/layout/Footer.astro'
+import Header from '@/components/layout/Header.astro'
 import About from '@/components/sections/About.astro'
 import Experience from '@/components/sections/Experience.astro'
 import Hero from '@/components/sections/Hero.astro'
@@ -7,8 +9,12 @@ import Layout from '@/layouts/Layout.astro'
 ---
 
 <Layout lang="es">
-  <Hero />
-  <Experience />
-  <Projects />
-  <About />
+  <Header />
+  <main class="space-y-10 sm:space-y-16">
+    <Hero />
+    <Experience />
+    <Projects />
+    <About />
+  </main>
+  <Footer />
 </Layout>
