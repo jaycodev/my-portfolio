@@ -1,32 +1,29 @@
 ---
 import LanguageToggle from '@/components/ui/LanguageToggle.astro'
 import ThemeToggle from '@/components/ui/ThemeToggle.astro'
-import { type Language, sectionIds, useTranslations } from '@/lib/i18n'
+import { sectionIds, useTranslations } from '@/i18n'
 
-interface Props {
-  lang: Language
-}
-
-const { lang } = Astro.props
+const lang = Astro.locals.lang
 const t = useTranslations(lang)
+const urlPrefix = lang === 'en' ? '/en' : ''
 
 const navItems = [
   {
     title: t('footer.experience'),
     label: sectionIds[lang].experience,
-    url: `/${lang}/#${sectionIds[lang].experience}`,
+    url: `${urlPrefix}/#${sectionIds[lang].experience}`,
     key: 'footer.experience',
   },
   {
     title: t('footer.projects'),
     label: sectionIds[lang].projects,
-    url: `/${lang}/#${sectionIds[lang].projects}`,
+    url: `${urlPrefix}/#${sectionIds[lang].projects}`,
     key: 'footer.projects',
   },
   {
     title: t('footer.about'),
     label: sectionIds[lang].about,
-    url: `/${lang}/#${sectionIds[lang].about}`,
+    url: `${urlPrefix}/#${sectionIds[lang].about}`,
     key: 'footer.about',
   },
 ]

@@ -3,7 +3,7 @@ import { ClientRouter } from 'astro:transitions'
 
 import Footer from '@/components/layout/Footer.astro'
 import Header from '@/components/layout/Header.astro'
-import { type Language, ui } from '@/lib/i18n'
+import { type Language, ui } from '@/i18n'
 
 import '@/globals.css'
 
@@ -14,6 +14,10 @@ interface Props {
 }
 
 const { lang } = Astro.props
+
+if (typeof Astro.locals === 'object') {
+  Astro.locals.lang = lang
+}
 ---
 
 <!doctype html>
@@ -45,16 +49,16 @@ const { lang } = Astro.props
     <ClientRouter />
   </head>
   <body class="min-h-screen w-full bg-background">
-    <Header lang={lang} />
+    <Header />
     <main class="space-y-10 sm:space-y-16">
       <slot />
     </main>
-    <Footer lang={lang} />
+    <Footer />
   </body>
 </html>
 
 <script>
-  import { ui, type Language } from '@/lib/i18n'
+  import { ui, type Language } from '@/i18n'
 
   function updateAllTranslations(lang: Language) {
     const titleElement = document.getElementById('page-title')

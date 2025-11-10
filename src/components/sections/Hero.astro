@@ -3,13 +3,9 @@ import CircleArrowDownIcon from '@/components/icons/CircleArrowDownIcon.astro'
 import LinkedInIcon from '@/components/icons/LinkedInIcon.astro'
 import MailIcon from '@/components/icons/MailIcon.astro'
 import Button from '@/components/ui/Button.astro'
-import { type Language, sectionIds, useTranslations } from '@/lib/i18n'
+import { sectionIds, useTranslations } from '@/i18n'
 
-interface Props {
-  lang: Language
-}
-
-const { lang } = Astro.props
+const lang = Astro.locals.lang
 const t = useTranslations(lang)
 ---
 

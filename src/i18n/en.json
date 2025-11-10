@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "title": "Jason Vila's Portfolio - Full Stack Developer",
+    "description": "Jason Vila's portfolio, Full Stack developer. Discover projects, skills, and contact for collaboration and learning."
+  },
+  "hero": {
+    "badge": "Full Stack Developer",
+    "title": "Hey, I'm Jason",
+    "description": {
+      "part1": "I create",
+      "strong1": "robust and scalable solutions",
+      "part2": ", focused on efficiency, quality, and user experience, always seeking to",
+      "strong2": "innovate and learn"
+    },
+    "cta": {
+      "contact": "Contact me",
+      "linkedin": "LinkedIn",
+      "discover": "Discover my work"
+    }
+  },
+  "experience": {
+    "badge": "Experience",
+    "title": "Work history",
+    "subtitle": "A timeline of my professional growth and key achievements.",
+    "job": {
+      "title": "Full Stack Web Developer Freelance",
+      "company": "Marketing VIP CO",
+      "period": "October 2025 - Present",
+      "description": "Development of complete web projects for agency clients, including fast and optimized landing pages. Refactoring and performance improvement on existing projects."
+    }
+  },
+  "projects": {
+    "badge": "Projects",
+    "title": "My work",
+    "subtitle": "Showcasing some of my best projects and technical achievements.",
+    "cta": {
+      "demo": "Demo",
+      "code": "Code"
+    },
+    "bookstudio": {
+      "title": "BookStudio",
+      "description": "Web platform for library book management and lending, with administrative panel."
+    },
+    "bookstudioApi": {
+      "title": "BookStudio API",
+      "description": "REST API for the BookStudio web platform, with hexagonal architecture and documentation."
+    },
+    "areska": {
+      "title": "Areska",
+      "description": "E-commerce for selling gaming peripherals and technology, with administration interface"
+    },
+    "areskaApi": {
+      "title": "Areska API",
+      "description": "Backend for the Areska e-commerce, developed with layered architecture and documentation."
+    },
+    "medidesk": {
+      "title": "MediDesk",
+      "description": "Web application for medical appointment management, with calendar scheduling and automatic reminders."
+    },
+    "mobilnet": {
+      "title": "Mobilnet",
+      "description": "Web application for RUC10 registration in GPON networks, incorporating data visualization through charts."
+    }
+  },
+  "about": {
+    "badge": "About me",
+    "title": "Full Stack Developer",
+    "description": {
+      "part1": "My name is",
+      "strong1": "Jason Vila",
+      "part2": "and I am currently studying",
+      "strong2": "Computing and Informatics",
+      "part3": "at",
+      "part4": "I am passionate about",
+      "strong3": "programming",
+      "part5": "and creating well-structured applications, focusing on",
+      "strong4": "scalable",
+      "part6": "projects with modern technologies while maintaining",
+      "strong5": "clean code",
+      "part7": "and good practices",
+      "part8": "I am motivated to keep",
+      "strong6": "learning",
+      "strong7": "sharing knowledge",
+      "part9": "and building",
+      "strong8": "real solutions",
+      "part10": "that leave a positive impact on projects and the",
+      "strong9": "developer community"
+    },
+    "cta": {
+      "github": "View Github",
+      "cv": "View CV"
+    }
+  },
+  "footer": {
+    "experience": "Experience",
+    "projects": "Projects",
+    "about": "About me",
+    "contact": "Contact"
+  },
+  "a11y": {
+    "theme": "Choose theme",
+    "language": "Choose language",
+    "goToProjects": "Go to projects"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "title": "Portafolio de Jason Vila - Desarrollador Full Stack",
+    "description": "Portafolio de Jason Vila, desarrollador Full Stack. Descubre proyectos, habilidades y contacto para colaboración y aprendizaje."
+  },
+  "hero": {
+    "badge": "Desarrollador Full Stack",
+    "title": "Hey, soy Jason",
+    "description": {
+      "part1": "Creo soluciones",
+      "strong1": "robustas y escalables",
+      "part2": ", enfocadas en la eficiencia, la calidad y la experiencia del usuario, siempre buscando",
+      "strong2": "innovar y aprender"
+    },
+    "cta": {
+      "contact": "Contáctame",
+      "linkedin": "LinkedIn",
+      "discover": "Descubre mi trabajo"
+    }
+  },
+  "experience": {
+    "badge": "Experiencia",
+    "title": "Trayectoria laboral",
+    "subtitle": "Una línea de tiempo de mi crecimiento profesional y logros clave.",
+    "job": {
+      "title": "Desarrollador Web Full Stack Freelance",
+      "company": "Marketing VIP CO",
+      "period": "Octubre 2025 - Presente",
+      "description": "Desarrollo de proyectos web completos para clientes de la agencia, incluyendo landing pages rápidas y optimizadas. Refactorización y mejora de rendimiento en proyectos existentes."
+    }
+  },
+  "projects": {
+    "badge": "Proyectos",
+    "title": "Mis trabajos",
+    "subtitle": "Mostrando algunos de mis mejores proyectos y logros técnicos.",
+    "cta": {
+      "demo": "Demo",
+      "code": "Código"
+    },
+    "bookstudio": {
+      "title": "BookStudio",
+      "description": "Plataforma web para la gestión y préstamo de libros en bibliotecas, con panel administrativo."
+    },
+    "bookstudioApi": {
+      "title": "BookStudio API",
+      "description": "API REST para la plataforma web BookStudio, con arquitectura hexagonal y documentación."
+    },
+    "areska": {
+      "title": "Areska",
+      "description": "E-commerce para la venta de periféricos de gaming y tecnología, con interfaz de administración"
+    },
+    "areskaApi": {
+      "title": "Areska API",
+      "description": "Backend del e-commerce Areska, desarrollado con arquitectura en capas y documentación."
+    },
+    "medidesk": {
+      "title": "MediDesk",
+      "description": "Aplicación web para la gestión de citas médicas, con programación en calendario y recordatorios automáticos."
+    },
+    "mobilnet": {
+      "title": "Mobilnet",
+      "description": "Aplicación web para el registro RUC10 en redes GPON, que incorpora visualización de datos mediante gráficos."
+    }
+  },
+  "about": {
+    "badge": "Sobre mí",
+    "title": "Desarrollador Full Stack",
+    "description": {
+      "part1": "Me llamo",
+      "strong1": "Jason Vila",
+      "part2": "y actualmente estudio",
+      "strong2": "Computación e Informática",
+      "part3": "en",
+      "part4": "Me apasiona la",
+      "strong3": "programación",
+      "part5": "y la creación de aplicaciones bien estructuradas, enfocándome en proyectos",
+      "strong4": "escalables",
+      "part6": "con tecnologías modernas y manteniendo un",
+      "strong5": "código limpio",
+      "part7": "y buenas prácticas",
+      "part8": "Me motiva seguir",
+      "strong6": "aprendiendo",
+      "strong7": "compartir conocimientos",
+      "part9": "y construir",
+      "strong8": "soluciones reales",
+      "part10": "que dejen un impacto positivo en los proyectos y en la",
+      "strong9": "comunidad de desarrolladores"
+    },
+    "cta": {
+      "github": "Ver Github",
+      "cv": "Ver CV"
+    }
+  },
+  "footer": {
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "a11y": {
+    "theme": "Elige el tema",
+    "language": "Elige el idioma",
+    "goToProjects": "Ir a proyectos"
+  }
+}
