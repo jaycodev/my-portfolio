@@ -12,7 +12,7 @@ const { currentLang } = Astro.props
 
 <div class="relative ml-1 mr-1">
   <a
-    href={currentLang === 'es' ? '/en/' : '/es/'}
+    href={currentLang === 'es' ? '/en/' : '/'}
     transition:persist
     id="language-toggle-btn"
     class="appearance-none border-none flex hover:scale-125 transition cursor-pointer"
@@ -38,7 +38,7 @@ const { currentLang } = Astro.props
 <script>
   function updateLanguageToggle() {
     const currentPath = window.location.pathname
-    const lang = currentPath.startsWith('/es') ? 'es' : 'en'
+    const lang = currentPath.startsWith('/en') ? 'en' : 'es'
 
     const button = document.getElementById('language-toggle-btn') as HTMLAnchorElement
     const esFlag = document.getElementById('es-flag')
@@ -46,7 +46,7 @@ const { currentLang } = Astro.props
 
     if (!button || !esFlag || !enFlag) return
 
-    button.href = lang === 'es' ? '/en/' : '/es/'
+    button.href = lang === 'es' ? '/en/' : '/'
 
     if (lang === 'es') {
       esFlag.classList.add('opacity-100')
