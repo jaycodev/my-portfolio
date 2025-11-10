@@ -13,9 +13,7 @@ interface Props {
 
 const { lang } = Astro.props
 
-if (typeof Astro.locals === 'object') {
-  Astro.locals.lang = lang
-}
+Astro.locals.lang = lang
 ---
 
 <!doctype html>

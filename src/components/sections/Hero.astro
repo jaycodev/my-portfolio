@@ -3,9 +3,9 @@ import CircleArrowDownIcon from '@/components/icons/CircleArrowDownIcon.astro'
 import LinkedInIcon from '@/components/icons/LinkedInIcon.astro'
 import MailIcon from '@/components/icons/MailIcon.astro'
 import Button from '@/components/ui/Button.astro'
-import { getUrlPrefix, sectionIds, useTranslations } from '@/i18n'
+import { defaultLang, getUrlPrefix, type Language, sectionIds, useTranslations } from '@/i18n'
 
-const lang = Astro.locals.lang
+const lang = (Astro.currentLocale as Language) || defaultLang
 const t = useTranslations(lang)
 const urlPrefix = getUrlPrefix(lang)
 ---

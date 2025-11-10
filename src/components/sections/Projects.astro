@@ -20,9 +20,9 @@ import ThymeleafIcon from '@/components/icons/ThymeleafIcon.astro'
 import TypeScriptIcon from '@/components/icons/TypeScriptIcon.astro'
 import Badge from '@/components/ui/Badge.astro'
 import Button from '@/components/ui/Button.astro'
-import { sectionIds, useTranslations } from '@/i18n'
+import { defaultLang, type Language, sectionIds, useTranslations } from '@/i18n'
 
-const lang = Astro.locals.lang
+const lang = (Astro.currentLocale as Language) || defaultLang
 const t = useTranslations(lang)
 
 const projects = [
