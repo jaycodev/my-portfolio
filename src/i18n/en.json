@@ -34,8 +34,17 @@
     "title": "My work",
     "subtitle": "Showcasing some of my best projects and technical achievements.",
     "cta": {
-      "demo": "Demo",
-      "code": "Code"
+      "preview": "Preview",
+      "code": "Code",
+      "figma": "Figma"
+    },
+    "marketingvip": {
+      "title": "Marketing VIP",
+      "description": "Landing page for a digital marketing and web design agency, focused on SEO and e-commerce."
+    },
+    "finiva": {
+      "title": "Finiva",
+      "description": "Landing page for a financial company that offers agile and personalized solutions."
     },
     "bookstudio": {
       "title": "BookStudio",
@@ -52,14 +61,6 @@
     "areskaApi": {
       "title": "Areska API",
       "description": "Backend for the Areska e-commerce, developed with layered architecture and documentation."
-    },
-    "medidesk": {
-      "title": "MediDesk",
-      "description": "Web application for medical appointment management, with calendar scheduling and automatic reminders."
-    },
-    "mobilnet": {
-      "title": "Mobilnet",
-      "description": "Web application for RUC10 registration in GPON networks, incorporating data visualization through charts."
     }
   },
   "about": {

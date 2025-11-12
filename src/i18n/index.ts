@@ -19,7 +19,7 @@ export const sectionIds = {
   en: {
     experience: 'experience',
     projects: 'projects',
-    about: 'about',
+    about: 'about-me',
   },
 } as const
 

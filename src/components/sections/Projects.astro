@@ -1,23 +1,20 @@
 ---
-import BootstrapIcon from '@/components/icons/BootstrapIcon.astro'
-import CloudinaryIcon from '@/components/icons/CloudinaryIcon.astro'
-import CSharpIcon from '@/components/icons/CSharpIcon.astro'
+import AstroIcon from '@/components/icons/AstroIcon.astro'
 import DockerIcon from '@/components/icons/DockerIcon.astro'
-import DotNetCoreIcon from '@/components/icons/DotNetCoreIcon.astro'
 import ExternalLinkIcon from '@/components/icons/ExternalLinkIcon.astro'
+import FigmaIcon from '@/components/icons/FigmaIcon.astro'
 import GithubIcon from '@/components/icons/GithubIcon.astro'
 import JavaIcon from '@/components/icons/JavaIcon.astro'
-import MySQLIcon from '@/components/icons/MySQLIcon.astro'
 import NextJsIcon from '@/components/icons/NextJsIcon.astro'
 import PostgreSQLIcon from '@/components/icons/PostgreSQLIcon.astro'
 import ReactIcon from '@/components/icons/ReactIcon.astro'
 import ShadcnIcon from '@/components/icons/ShadcnIcon.astro'
 import SpringBootIcon from '@/components/icons/SpringBootIcon.astro'
-import SQLServerIcon from '@/components/icons/SQLServerIcon.astro'
 import SwaggerIcon from '@/components/icons/SwaggerIcon.astro'
 import TailwindIcon from '@/components/icons/TailwindIcon.astro'
-import ThymeleafIcon from '@/components/icons/ThymeleafIcon.astro'
 import TypeScriptIcon from '@/components/icons/TypeScriptIcon.astro'
+import VercelIcon from '@/components/icons/VercelIcon.astro'
+import ViteIcon from '@/components/icons/ViteIcon.astro'
 import Badge from '@/components/ui/Badge.astro'
 import Button from '@/components/ui/Button.astro'
 import { sectionIds, useTranslations } from '@/i18n'
@@ -26,6 +23,38 @@ const lang = Astro.locals.lang
 const t = useTranslations(lang)
 
 const projects = [
+  {
+    key: 'marketingvip',
+    title: t('projects.marketingvip.title'),
+    description: t('projects.marketingvip.description'),
+    image: '/images/projects/marketingvip.webp',
+    technologies: [
+      { label: 'TypeScript', icon: TypeScriptIcon },
+      { label: 'Astro', icon: AstroIcon },
+      { label: 'Tailwind CSS', icon: TailwindIcon },
+      { label: 'Vite', icon: ViteIcon },
+      { label: 'Vercel', icon: VercelIcon },
+    ],
+    liveUrl: 'https://marketingvip.co',
+    figmaUrl:
+      'https://www.figma.com/design/Nj6Ozif6zH9gqsjhbFKu1w/Marketing-Vip-New-Web?m=auto&t=KoCklLezvJWwbCFU-6',
+  },
+  {
+    key: 'finiva',
+    title: t('projects.finiva.title'),
+    description: t('projects.finiva.description'),
+    image: '/images/projects/finiva.webp',
+    technologies: [
+      { label: 'TypeScript', icon: TypeScriptIcon },
+      { label: 'Astro', icon: AstroIcon },
+      { label: 'Tailwind CSS', icon: TailwindIcon },
+      { label: 'Vite', icon: ViteIcon },
+      { label: 'Vercel', icon: VercelIcon },
+    ],
+    liveUrl: 'https://finiva-app.vercel.app',
+    figmaUrl:
+      'https://www.figma.com/design/PunxRNCWAihlEqlKc5xMw2/Finiva-Landing?m=auto&t=KoCklLezvJWwbCFU-6',
+  },
   {
     key: 'bookstudio',
     title: t('projects.bookstudio.title'),
@@ -43,8 +72,8 @@ const projects = [
   },
   {
     key: 'bookstudio-api',
-    title: t('projects.bookstudio-api.title'),
-    description: t('projects.bookstudio-api.description'),
+    title: t('projects.bookstudioApi.title'),
+    description: t('projects.bookstudioApi.description'),
     image: '/images/projects/bookstudio-api.webp',
     technologies: [
       { label: 'Java', icon: JavaIcon },
@@ -73,8 +102,8 @@ const projects = [
   },
   {
     key: 'areska-api',
-    title: t('projects.areska-api.title'),
-    description: t('projects.areska-api.description'),
+    title: t('projects.areskaApi.title'),
+    description: t('projects.areskaApi.description'),
     image: '/images/projects/areska-api.webp',
     technologies: [
       { label: 'Java', icon: JavaIcon },
@@ -85,36 +114,6 @@ const projects = [
     ],
     liveUrl: 'https://api-areska.onrender.com',
     githubUrl: 'https://github.com/jaycodev/areska-api',
-  },
-  {
-    key: 'medidesk',
-    title: t('projects.medidesk.title'),
-    description: t('projects.medidesk.description'),
-    image: '/images/projects/medidesk.webp',
-    technologies: [
-      { label: 'C#', icon: CSharpIcon },
-      { label: '.NET Core', icon: DotNetCoreIcon },
-      { label: 'Bootstrap', icon: BootstrapIcon },
-      { label: 'Cloudinary', icon: CloudinaryIcon },
-      { label: 'SQL Server', icon: SQLServerIcon },
-    ],
-    liveUrl: 'https://medidesk.onrender.com',
-    githubUrl: 'https://github.com/jaycodev/medidesk',
-  },
-  {
-    key: 'mobilnet',
-    title: t('projects.mobilnet.title'),
-    description: t('projects.mobilnet.description'),
-    image: '/images/projects/mobilnet.webp',
-    technologies: [
-      { label: 'Java', icon: JavaIcon },
-      { label: 'Spring Boot', icon: SpringBootIcon },
-      { label: 'Thymeleaf', icon: ThymeleafIcon },
-      { label: 'Bootstrap', icon: BootstrapIcon },
-      { label: 'MySQL', icon: MySQLIcon },
-    ],
-    liveUrl: 'https://mobilnet.onrender.com',
-    githubUrl: 'https://github.com/jaycodev/mobilnet',
   },
 ]
 ---
@@ -164,19 +163,27 @@ const projects = [
               </div>
 
               <div class="flex gap-3 mt-auto">
-                {project.liveUrl && (
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                    <Button>
-                      <ExternalLinkIcon class="size-4" />
-                      <span data-i18n="projects.cta.demo">{t('projects.cta.demo')}</span>
-                    </Button>
-                  </a>
-                )}
                 {project.githubUrl && (
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Button variant="secondary">
                       <GithubIcon class="size-4" />
                       <span data-i18n="projects.cta.code">{t('projects.cta.code')}</span>
+                    </Button>
+                  </a>
+                )}
+                {project.figmaUrl && (
+                  <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer">
+                    <Button variant="secondary">
+                      <FigmaIcon class="size-4" />
+                      <span data-i18n="projects.cta.figma">{t('projects.cta.figma')}</span>
+                    </Button>
+                  </a>
+                )}
+                {project.liveUrl && (
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    <Button>
+                      <ExternalLinkIcon class="size-4" />
+                      <span data-i18n="projects.cta.preview">{t('projects.cta.preview')}</span>
                     </Button>
                   </a>
                 )}

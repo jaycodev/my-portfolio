@@ -34,8 +34,17 @@
     "title": "Mis trabajos",
     "subtitle": "Mostrando algunos de mis mejores proyectos y logros técnicos.",
     "cta": {
-      "demo": "Demo",
-      "code": "Código"
+      "preview": "Vista previa",
+      "code": "Código",
+      "figma": "Figma"
+    },
+    "marketingvip": {
+      "title": "Marketing VIP",
+      "description": "Landing page para una agencia de marketing digital y diseño web, con enfoque en SEO y e-commerce."
+    },
+    "finiva": {
+      "title": "Finiva",
+      "description": "Landing page para una empresa financiera que ofrece soluciones ágiles y personalizadas."
     },
     "bookstudio": {
       "title": "BookStudio",
@@ -52,17 +61,9 @@
     "areskaApi": {
       "title": "Areska API",
       "description": "Backend del e-commerce Areska, desarrollado con arquitectura en capas y documentación."
-    },
-    "medidesk": {
-      "title": "MediDesk",
-      "description": "Aplicación web para la gestión de citas médicas, con programación en calendario y recordatorios automáticos."
-    },
-    "mobilnet": {
-      "title": "Mobilnet",
-      "description": "Aplicación web para el registro RUC10 en redes GPON, que incorpora visualización de datos mediante gráficos."
     }
   },
-  "about": {
+  "aboutMe": {
     "badge": "Sobre mí",
     "title": "Desarrollador Full Stack",
     "description": {
