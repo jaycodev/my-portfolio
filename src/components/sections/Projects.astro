@@ -59,7 +59,10 @@ const projects = [
     key: 'bookstudio',
     title: t('projects.bookstudio.title'),
     description: t('projects.bookstudio.description'),
-    image: '/images/projects/bookstudio.webp',
+    image: {
+      light: '/images/projects/bookstudio-light.webp',
+      dark: '/images/projects/bookstudio-dark.webp',
+    },
     technologies: [
       { label: 'TypeScript', icon: TypeScriptIcon },
       { label: 'Next.js', icon: NextJsIcon },
@@ -74,7 +77,10 @@ const projects = [
     key: 'bookstudio-api',
     title: t('projects.bookstudioApi.title'),
     description: t('projects.bookstudioApi.description'),
-    image: '/images/projects/bookstudio-api.webp',
+    image: {
+      light: '/images/projects/bookstudio-api-light.webp',
+      dark: '/images/projects/bookstudio-api-dark.webp',
+    },
     technologies: [
       { label: 'Java', icon: JavaIcon },
       { label: 'Spring Boot', icon: SpringBootIcon },
@@ -89,7 +95,10 @@ const projects = [
     key: 'areska',
     title: t('projects.areska.title'),
     description: t('projects.areska.description'),
-    image: '/images/projects/areska.webp',
+    image: {
+      light: '/images/projects/areska-light.webp',
+      dark: '/images/projects/areska-dark.webp',
+    },
     technologies: [
       { label: 'TypeScript', icon: TypeScriptIcon },
       { label: 'Next.js', icon: NextJsIcon },
@@ -104,7 +113,10 @@ const projects = [
     key: 'areska-api',
     title: t('projects.areskaApi.title'),
     description: t('projects.areskaApi.description'),
-    image: '/images/projects/areska-api.webp',
+    image: {
+      light: '/images/projects/areska-api-light.webp',
+      dark: '/images/projects/areska-api-dark.webp',
+    },
     technologies: [
       { label: 'Java', icon: JavaIcon },
       { label: 'Spring Boot', icon: SpringBootIcon },
@@ -135,11 +147,26 @@ const projects = [
         projects.map((project) => (
           <div class="group relative flex flex-col overflow-hidden rounded-xl border transition-all hover:border-gray-400 dark:hover:border-white/30">
             <div class="relative h-64 overflow-hidden bg-accent">
-              <img
-                src={project.image}
-                alt={project.title}
-                class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-              />
+              {typeof project.image === 'string' ? (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                />
+              ) : (
+                <>
+                  <img
+                    src={project.image.light}
+                    alt={project.title}
+                    class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105 block dark:hidden"
+                  />
+                  <img
+                    src={project.image.dark}
+                    alt={project.title}
+                    class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105 hidden dark:block"
+                  />
+                </>
+              )}
             </div>
 
             <div class="flex-1 flex flex-col p-6">
