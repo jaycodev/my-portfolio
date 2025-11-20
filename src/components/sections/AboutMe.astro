@@ -70,16 +70,16 @@ const t = useTranslations(lang)
         </p>
 
         <div class="flex flex-wrap gap-4 justify-start">
-          <a href="/cv/cv-jason-vila.pdf" target="_blank" rel="noopener noreferrer">
-            <Button variant="secondary">
-              <FileTextIcon class="size-4" />
-              <span data-i18n="aboutMe.cta.cv">{t('aboutMe.cta.cv')}</span>
-            </Button>
-          </a>
           <a href="https://github.com/jaycodev" target="_blank" rel="noopener noreferrer">
-            <Button>
+            <Button variant="secondary">
               <GithubIcon class="size-4" />
               <span data-i18n="aboutMe.cta.github">{t('aboutMe.cta.github')}</span>
+            </Button>
+          </a>
+          <a href="/cv/cv-jason-vila.pdf" target="_blank" rel="noopener noreferrer">
+            <Button>
+              <FileTextIcon class="size-4" />
+              <span data-i18n="aboutMe.cta.cv">{t('aboutMe.cta.cv')}</span>
             </Button>
           </a>
         </div>
