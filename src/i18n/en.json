@@ -63,7 +63,7 @@
       "description": "Backend for the Areska e-commerce, developed with layered architecture and documentation."
     }
   },
-  "about": {
+  "aboutMe": {
     "badge": "About me",
     "title": "Full Stack Developer",
     "description": {
