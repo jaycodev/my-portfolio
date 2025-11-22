@@ -55,14 +55,14 @@ const navItems = [
 </header>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  function initNavigation() {
     const navItems = document.querySelectorAll('.nav-item')
 
     function updateActiveNav() {
       const sections = document.querySelectorAll('section[id]')
       const scrollPos = window.scrollY + 100
 
-      let currentSection = 'inicio'
+      let currentSection: string | null = null
 
       sections.forEach((section) => {
         const sectionTop = (section as HTMLElement).offsetTop
@@ -92,7 +92,10 @@ const navItems = [
     })
 
     updateActiveNav()
-  })
+  }
+
+  document.addEventListener('DOMContentLoaded', initNavigation)
+  document.addEventListener('astro:after-swap', initNavigation)
 </script>
 
 <style>
